@@ -164,7 +164,7 @@ class Asset(BaseServiceList):
 
             for tag in i.tag.all():
                 if tag_text:
-                    tag_text += ",%s" % tag
+                    tag_text += (",%s" % tag)
                 else:
                     tag_text = tag
             result.append(
