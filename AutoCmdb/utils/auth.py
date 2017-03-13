@@ -55,6 +55,7 @@ def api_auth_method(request):
 
     for k in del_keys:              # 清除需要清除的 加密字符串和时间戳
         if len(ENCRYPT_LIST) > 2:
+            print(".....ENCRYPT_LIST length: ", len(ENCRYPT_LIST))
             del ENCRYPT_LIST[k]
 
     if exist:   # 如果为真,说明加密字符串已经存在
