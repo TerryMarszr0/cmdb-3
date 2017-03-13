@@ -149,6 +149,7 @@ class Asset(BaseServiceList):
         return list(result)
 
     def tag_name_list(self, asset_list):
+        """获取标签"""
         id_list = []
 
         for i in asset_list:
@@ -156,7 +157,7 @@ class Asset(BaseServiceList):
 
         obj = models.Asset.objects.filter(id__in=id_list)
         for i in obj:
-            print(i.all())
+            print(i.tag.all())
 
         return True
 
