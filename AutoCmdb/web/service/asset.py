@@ -105,7 +105,7 @@ class Asset(BaseServiceList):
                 'q': 'id',
                 'title': "标签",
                 'display': 1,
-                'text': {'content': "{n}", 'kwargs': {'n': '@@tag_name_list'}},
+                'text': {'content': "{n}", 'kwargs': {'n': '@@tagName_list'}},
                 'attr': {
                     # 'name': 'device_status_id',
                     # 'id': '@device_status_id',
@@ -149,7 +149,7 @@ class Asset(BaseServiceList):
         result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
         return list(result)
 
-    def tag_name_list(self, asset_list):
+    def tagName_list(self, asset_list):
         """获取标签"""
         id_list = []
 
@@ -174,6 +174,12 @@ class Asset(BaseServiceList):
                 }
             )
         return result
+
+    @property
+    def tag_name_list(self):
+        result = models.Tag.objects.all().values('id', 'name')
+
+        return list(result)
 
     @property
     def business_unit_list(self):
@@ -221,7 +227,8 @@ class Asset(BaseServiceList):
                 'device_type_list': self.device_type_list,
                 'idc_list': self.idc_list,
                 'business_unit_list': self.business_unit_list,
-                'tag_name_list': self.tag_name_list(ret['data_list']),
+                'tagName_list': self.tagName_list(ret['data_list']),   # 用作资产表中 对应的标签名称
+                'tag_name_list': self.tag_name_list,   # 用作搜索条件处显示标签名称搜索条件
             }
             response.data = ret
             response.message = '获取成功'
