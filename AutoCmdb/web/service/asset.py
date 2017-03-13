@@ -170,7 +170,7 @@ class Asset(BaseServiceList):
             result.append(
                 {
                     'id': i.id,
-                    'name': tag_text,
+                    'tag': tag_text,
                 }
             )
 
