@@ -133,7 +133,7 @@ class Asset(BaseServiceList):
         values = models.IDC.objects.only('id', 'name', 'floor')
         print(values)
         result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
-        print(result)
+        print(list(result))
         return list(result)
 
     @property
@@ -302,10 +302,11 @@ class Business(BaseServiceList):
         extra_select = {}
         super(Business, self).__init__(condition_config, table_config, extra_select)
 
-    # @property
-    # def name_list(self):
-    #     result = map(lambda x: {'id': x[0], 'name': x[1]}, models.BusinessUnit.objects.)
-    #     return list(result)
+    @property
+    def name_list(self):
+        result = map(lambda x: {'id': x[0], 'name': x[1]}, models.BusinessUnit.objects.all().values('name'))
+        print(list(result))
+        return list(result)
 
     @staticmethod
     def business_condition(request):
@@ -343,9 +344,9 @@ class Business(BaseServiceList):
                 "page_str": page_info.pager(),
                 "page_start": page_info.start,
             }
-            # ret['global_dict'] = {
-            #     'name_list': self.name_list,
-            # }
+            ret['global_dict'] = {
+                'name_list': self.name_list,
+            }
             response.data = ret
             response.message = '获取成功'
         except Exception as e:
