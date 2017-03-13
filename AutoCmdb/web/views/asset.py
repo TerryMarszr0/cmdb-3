@@ -47,6 +47,8 @@ class BusinessJsonView(View):
     def get(self, request):
         obj = asset.Business()
         response = obj.fetch_business(request)
+
+        print(response.__dict__)
         return JsonResponse(response.__dict__)
 
     def delete(self, request):
