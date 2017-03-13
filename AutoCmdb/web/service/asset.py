@@ -101,6 +101,20 @@ class Asset(BaseServiceList):
                          'global-name': 'device_status_list'}
             },
             {
+                'q': 'tag__name',
+                'title': "标签",
+                'display': 1,
+                'text': {'content': "{n}", 'kwargs': {'n': '@tag__name'}},
+                'attr': {
+                    # 'name': 'device_status_id',
+                    # 'id': '@device_status_id',
+                    # 'origin': '@device_status_id',
+                    # 'edit-enable': 'true',
+                    # 'edit-type': 'select',
+                    # 'global-name': 'device_status_list'
+                }
+            },
+            {
                 'q': None,
                 'title': "选项",
                 'display': 1,
