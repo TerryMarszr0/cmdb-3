@@ -61,17 +61,17 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/service/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="176" column="24" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
+            <state relative-caret-position="345">
+              <caret line="176" column="8" selection-start-line="176" selection-start-column="8" selection-end-line="176" selection-end-column="8" />
               <folding>
                 <element signature="e#45#56#0" expanded="true" />
-                <element signature="e#6923#7008#0" expanded="false" />
-                <element signature="e#7071#7521#0" expanded="false" />
-                <element signature="e#8960#9351#0" expanded="false" />
-                <element signature="e#9408#10353#0" expanded="false" />
-                <element signature="e#10431#10886#0" expanded="false" />
-                <marker date="1489391813000" expanded="true" signature="5218:5347" ph="select hostn... repository_server" />
-                <marker date="1489391813000" expanded="true" signature="5380:5528" ph="select manag... repository_networkdevice" />
+                <element signature="e#6919#7004#0" expanded="false" />
+                <element signature="e#7067#7517#0" expanded="false" />
+                <element signature="e#8956#9347#0" expanded="false" />
+                <element signature="e#9404#10349#0" expanded="false" />
+                <element signature="e#10427#10882#0" expanded="false" />
+                <marker date="1489391894000" expanded="true" signature="5218:5347" ph="select hostn... repository_server" />
+                <marker date="1489391894000" expanded="true" signature="5380:5528" ph="select manag... repository_networkdevice" />
               </folding>
             </state>
           </provider>
@@ -1061,17 +1061,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/service/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="176" column="24" selection-start-line="176" selection-start-column="24" selection-end-line="176" selection-end-column="24" />
+        <state relative-caret-position="345">
+          <caret line="176" column="8" selection-start-line="176" selection-start-column="8" selection-end-line="176" selection-end-column="8" />
           <folding>
             <element signature="e#45#56#0" expanded="true" />
-            <element signature="e#6923#7008#0" expanded="false" />
-            <element signature="e#7071#7521#0" expanded="false" />
-            <element signature="e#8960#9351#0" expanded="false" />
-            <element signature="e#9408#10353#0" expanded="false" />
-            <element signature="e#10431#10886#0" expanded="false" />
-            <marker date="1489391813000" expanded="true" signature="5218:5347" ph="select hostn... repository_server" />
-            <marker date="1489391813000" expanded="true" signature="5380:5528" ph="select manag... repository_networkdevice" />
+            <element signature="e#6919#7004#0" expanded="false" />
+            <element signature="e#7067#7517#0" expanded="false" />
+            <element signature="e#8956#9347#0" expanded="false" />
+            <element signature="e#9404#10349#0" expanded="false" />
+            <element signature="e#10427#10882#0" expanded="false" />
+            <marker date="1489391894000" expanded="true" signature="5218:5347" ph="select hostn... repository_server" />
+            <marker date="1489391894000" expanded="true" signature="5380:5528" ph="select manag... repository_networkdevice" />
           </folding>
         </state>
       </provider>
