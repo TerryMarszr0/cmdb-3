@@ -163,17 +163,15 @@ class Asset(BaseServiceList):
             tag_text = ""
 
             for tag in i.tag.all():
-                print(tag)
+                tag_text += ",%s" % tag
             result.append(
                 {
                     'id': i.id,
-
+                    'tag': tag_text,
                 }
             )
 
-
-
-        return True
+        return result
 
     @property
     def business_unit_list(self):
