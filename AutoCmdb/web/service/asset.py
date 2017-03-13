@@ -17,6 +17,7 @@ class Asset(BaseServiceList):
             {'name': 'cabinet_num', 'text': '机柜号', 'condition_type': 'input'},
             {'name': 'device_type_id', 'text': '资产类型', 'condition_type': 'select', 'global_name': 'device_type_list'},
             {'name': 'device_status_id', 'text': '资产状态', 'condition_type': 'select', 'global_name': 'device_status_list'},
+            {'name': 'tag__name', 'text': '资产状态', 'condition_type': 'select', 'global_name': 'tag_name_list'},
         ]
 
         # 表格的配置

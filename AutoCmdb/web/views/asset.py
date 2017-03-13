@@ -16,7 +16,6 @@ class AssetJsonView(View):
     def get(self, request):
         obj = asset.Asset()
         response = obj.fetch_assets(request)
-        print(response.data['global_dict']['idc_list'])
         return JsonResponse(response.__dict__)
 
     def delete(self, request):
