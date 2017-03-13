@@ -146,11 +146,14 @@ class Asset(BaseServiceList):
     def idc_list(self):
         values = models.IDC.objects.only('id', 'name', 'floor')
         result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
+        print("result: ", list(result))
         return list(result)
 
     def tag_name_list(self, asset_list):
         """获取标签"""
         id_list = []
+
+        result = {}
 
         for i in asset_list:
             id_list.append(i['id'])
@@ -158,6 +161,8 @@ class Asset(BaseServiceList):
         obj = models.Asset.objects.filter(id__in=id_list)
         for i in obj:
             print(i.tag.all())
+
+
 
         return True
 
