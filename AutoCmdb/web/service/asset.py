@@ -153,14 +153,23 @@ class Asset(BaseServiceList):
         """获取标签"""
         id_list = []
 
-        result = {}
+        result = []
 
         for i in asset_list:
             id_list.append(i['id'])
 
         obj = models.Asset.objects.filter(id__in=id_list)
         for i in obj:
-            print(i.tag.all())
+            tag_text = ""
+
+            for tag in i.tag.all():
+                print(tag)
+            result.append(
+                {
+                    'id': i.id,
+
+                }
+            )
 
 
 
