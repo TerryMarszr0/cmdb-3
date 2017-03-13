@@ -58,27 +58,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asset.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/service/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="345">
+              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding>
                 <element signature="e#45#56#0" expanded="true" />
-                <element signature="e#6379#6952#0" expanded="false" />
-                <element signature="e#7146#7231#0" expanded="false" />
-                <element signature="e#7294#7744#0" expanded="false" />
-                <element signature="e#9274#9665#0" expanded="false" />
-                <element signature="e#9722#10667#0" expanded="false" />
-                <element signature="e#10745#11200#0" expanded="false" />
-                <marker date="1489393852000" expanded="true" signature="5353:5482" ph="select hostn... repository_server" />
-                <marker date="1489393852000" expanded="true" signature="5515:5663" ph="select manag... repository_networkdevice" />
+                <element signature="e#6370#6943#0" expanded="false" />
+                <element signature="e#7137#7222#0" expanded="false" />
+                <element signature="e#7285#7735#0" expanded="false" />
+                <element signature="e#9265#9656#0" expanded="false" />
+                <element signature="e#9713#10658#0" expanded="false" />
+                <element signature="e#10736#11191#0" expanded="false" />
+                <marker date="1489398705000" expanded="true" signature="5344:5473" ph="select hostn... repository_server" />
+                <marker date="1489398705000" expanded="true" signature="5506:5654" ph="select manag... repository_networkdevice" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_layout.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/templates/layout/_layout.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="517">
@@ -101,8 +101,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repository/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+            <state relative-caret-position="180">
+              <caret line="176" column="52" selection-start-line="176" selection-start-column="52" selection-end-line="176" selection-end-column="52" />
               <folding>
                 <element signature="e#68#403#0" expanded="false" />
                 <element signature="e#441#739#0" expanded="false" />
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/web/templates/business_list.html" />
         <option value="$PROJECT_DIR$/web/templates/idc_list.html" />
         <option value="$PROJECT_DIR$/web/views/asset.py" />
-        <option value="$PROJECT_DIR$/web/service/asset.py" />
         <option value="$PROJECT_DIR$/web/templates/layout/_layout.html" />
+        <option value="$PROJECT_DIR$/web/service/asset.py" />
       </list>
     </option>
   </component>
@@ -249,86 +249,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoCmdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoCmdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoCmdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoCmdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoCmdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoCmdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoCmdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoCmdb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1006,7 +926,7 @@
         <state relative-caret-position="240">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
-            <element signature="e#45#74#0" expanded="true" />
+            <element signature="e#45#74#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1032,7 +952,7 @@
         <state relative-caret-position="15">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
-            <element signature="e#88#99#0" expanded="true" />
+            <element signature="e#88#99#0" expanded="false" />
             <element signature="e#4507#4898#0" expanded="false" />
             <element signature="e#4955#5900#0" expanded="false" />
             <element signature="e#5978#6433#0" expanded="false" />
@@ -1045,7 +965,7 @@
         <state relative-caret-position="450">
           <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
           <folding>
-            <element signature="e#89#118#0" expanded="true" />
+            <element signature="e#89#118#0" expanded="false" />
             <element signature="e#292#385#0" expanded="false" />
           </folding>
         </state>
@@ -1091,6 +1011,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/service/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/layout/_layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="48" column="63" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="176" column="52" selection-start-line="176" selection-start-column="52" selection-end-line="176" selection-end-column="52" />
+          <folding>
+            <element signature="e#68#403#0" expanded="false" />
+            <element signature="e#441#739#0" expanded="false" />
+            <element signature="e#1903#1947#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1098,14 +1054,6 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/django/db/models/manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1122,49 +1070,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/service/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
-          <folding>
-            <element signature="e#68#403#0" expanded="false" />
-            <element signature="e#441#739#0" expanded="false" />
-            <element signature="e#1903#1947#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/service/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="345">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
           <folding>
             <element signature="e#45#56#0" expanded="true" />
-            <element signature="e#6379#6952#0" expanded="false" />
-            <element signature="e#7146#7231#0" expanded="false" />
-            <element signature="e#7294#7744#0" expanded="false" />
-            <element signature="e#9274#9665#0" expanded="false" />
-            <element signature="e#9722#10667#0" expanded="false" />
-            <element signature="e#10745#11200#0" expanded="false" />
-            <marker date="1489393852000" expanded="true" signature="5353:5482" ph="select hostn... repository_server" />
-            <marker date="1489393852000" expanded="true" signature="5515:5663" ph="select manag... repository_networkdevice" />
+            <element signature="e#6370#6943#0" expanded="false" />
+            <element signature="e#7137#7222#0" expanded="false" />
+            <element signature="e#7285#7735#0" expanded="false" />
+            <element signature="e#9265#9656#0" expanded="false" />
+            <element signature="e#9713#10658#0" expanded="false" />
+            <element signature="e#10736#11191#0" expanded="false" />
+            <marker date="1489398705000" expanded="true" signature="5344:5473" ph="select hostn... repository_server" />
+            <marker date="1489398705000" expanded="true" signature="5506:5654" ph="select manag... repository_networkdevice" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/templates/layout/_layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="48" column="63" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
