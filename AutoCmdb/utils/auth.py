@@ -51,12 +51,11 @@ def api_auth_method(request):
         if n == encrypt:            # 如果加密字符串已经存在,则将 exist 置为 True
             exist = True
 
-    print(limit_timestamp, ENCRYPT_LIST, del_keys)
-
     for k in del_keys:              # 清除需要清除的 加密字符串和时间戳
         if len(ENCRYPT_LIST) > 2:
             print(".....ENCRYPT_LIST length: ", len(ENCRYPT_LIST))
-            del ENCRYPT_LIST[k]
+            if k in ENCRYPT_LIST:
+                del ENCRYPT_LIST[k]
 
     if exist:   # 如果为真,说明加密字符串已经存在
         return False
