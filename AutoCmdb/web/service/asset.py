@@ -101,10 +101,10 @@ class Asset(BaseServiceList):
                          'global-name': 'device_status_list'}
             },
             {
-                'q': 'tag__name',
+                'q': 'id',
                 'title': "标签",
                 'display': 1,
-                'text': {'content': "{n}", 'kwargs': {'n': '@tag__name'}},
+                'text': {'content': "{n}", 'kwargs': {'n': '@@tag_name_list'}},
                 'attr': {
                     # 'name': 'device_status_id',
                     # 'id': '@device_status_id',
@@ -147,6 +147,15 @@ class Asset(BaseServiceList):
         values = models.IDC.objects.only('id', 'name', 'floor')
         result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
         return list(result)
+
+    def tag_name_list(self, asset_list):
+        id_list = []
+
+        for i in asset_list:
+            id_list.append(i['id'])
+        print(id_list)
+
+        return True
 
     @property
     def business_unit_list(self):
@@ -194,7 +203,8 @@ class Asset(BaseServiceList):
                 'device_status_list': self.device_status_list,
                 'device_type_list': self.device_type_list,
                 'idc_list': self.idc_list,
-                'business_unit_list': self.business_unit_list
+                'business_unit_list': self.business_unit_list,
+                'tag_name_list': self.tag_name_list(ret['data_list']),
             }
             response.data = ret
             response.message = '获取成功'
