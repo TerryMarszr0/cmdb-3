@@ -56,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asset.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/service/asset.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
@@ -68,14 +68,14 @@
                 <element signature="e#7666#8057#0" expanded="false" />
                 <element signature="e#8114#9059#0" expanded="false" />
                 <element signature="e#9137#9592#0" expanded="false" />
-                <element signature="e#12126#12576#0" expanded="false" />
-                <element signature="e#13778#14169#0" expanded="false" />
-                <element signature="e#14226#15171#0" expanded="false" />
-                <element signature="e#15249#15704#0" expanded="false" />
-                <marker date="1489386304000" expanded="true" signature="4677:4806" ph="select hostn... repository_server" />
-                <marker date="1489386304000" expanded="true" signature="4839:4987" ph="select manag... repository_networkdevice" />
-                <marker date="1489386304000" expanded="true" signature="11351:11480" ph="select hostn... repository_server" />
-                <marker date="1489386304000" expanded="true" signature="11515:11663" ph="select manag... repository_networkdevice" />
+                <element signature="e#12132#12582#0" expanded="false" />
+                <element signature="e#13784#14175#0" expanded="false" />
+                <element signature="e#14232#15177#0" expanded="false" />
+                <element signature="e#15255#15710#0" expanded="false" />
+                <marker date="1489386577000" expanded="true" signature="4677:4806" ph="select hostn... repository_server" />
+                <marker date="1489386577000" expanded="true" signature="4839:4987" ph="select manag... repository_networkdevice" />
+                <marker date="1489386577000" expanded="true" signature="11351:11480" ph="select hostn... repository_server" />
+                <marker date="1489386577000" expanded="true" signature="11515:11663" ph="select manag... repository_networkdevice" />
               </folding>
             </state>
           </provider>
@@ -107,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nb-list.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nb-list.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/static/js/nb-list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="367" column="32" selection-start-line="367" selection-start-column="32" selection-end-line="367" selection-end-column="32" />
+            <state relative-caret-position="210">
+              <caret line="361" column="42" selection-start-line="361" selection-start-column="42" selection-end-line="361" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -183,8 +183,8 @@
         <option value="$PROJECT_DIR$/web/templates/business_list.html" />
         <option value="$PROJECT_DIR$/web/service/base.py" />
         <option value="$PROJECT_DIR$/web/views/asset.py" />
-        <option value="$PROJECT_DIR$/web/service/asset.py" />
         <option value="$PROJECT_DIR$/web/static/js/nb-list.js" />
+        <option value="$PROJECT_DIR$/web/service/asset.py" />
       </list>
     </option>
   </component>
@@ -1096,6 +1096,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/static/js/nb-list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="361" column="42" selection-start-line="361" selection-start-column="42" selection-end-line="361" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/business_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/repository/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1121,31 +1137,15 @@
             <element signature="e#7666#8057#0" expanded="false" />
             <element signature="e#8114#9059#0" expanded="false" />
             <element signature="e#9137#9592#0" expanded="false" />
-            <element signature="e#12126#12576#0" expanded="false" />
-            <element signature="e#13778#14169#0" expanded="false" />
-            <element signature="e#14226#15171#0" expanded="false" />
-            <element signature="e#15249#15704#0" expanded="false" />
-            <marker date="1489386304000" expanded="true" signature="4677:4806" ph="select hostn... repository_server" />
-            <marker date="1489386304000" expanded="true" signature="4839:4987" ph="select manag... repository_networkdevice" />
-            <marker date="1489386304000" expanded="true" signature="11351:11480" ph="select hostn... repository_server" />
-            <marker date="1489386304000" expanded="true" signature="11515:11663" ph="select manag... repository_networkdevice" />
+            <element signature="e#12132#12582#0" expanded="false" />
+            <element signature="e#13784#14175#0" expanded="false" />
+            <element signature="e#14232#15177#0" expanded="false" />
+            <element signature="e#15255#15710#0" expanded="false" />
+            <marker date="1489386577000" expanded="true" signature="4677:4806" ph="select hostn... repository_server" />
+            <marker date="1489386577000" expanded="true" signature="4839:4987" ph="select manag... repository_networkdevice" />
+            <marker date="1489386577000" expanded="true" signature="11351:11480" ph="select hostn... repository_server" />
+            <marker date="1489386577000" expanded="true" signature="11515:11663" ph="select manag... repository_networkdevice" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/templates/business_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="129" column="19" selection-start-line="129" selection-start-column="19" selection-end-line="129" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/static/js/nb-list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="367" column="32" selection-start-line="367" selection-start-column="32" selection-end-line="367" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>

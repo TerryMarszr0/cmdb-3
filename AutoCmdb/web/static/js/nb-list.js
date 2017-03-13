@@ -360,7 +360,6 @@
      初始化搜索条件
      */
     function initSearchCondition(config) {
-        console.log(config)
         var $search_condition = $('#search_condition');
         if ($search_condition.attr('init') == 'true') {
             return
