@@ -131,7 +131,9 @@ class Asset(BaseServiceList):
     @property
     def idc_list(self):
         values = models.IDC.objects.only('id', 'name', 'floor')
+        print(values)
         result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
+        print(result)
         return list(result)
 
     @property
@@ -245,14 +247,11 @@ class Asset(BaseServiceList):
         return response
 
 
-
 class Business(BaseServiceList):
     def __init__(self):
         # 查询条件的配置
         condition_config = [
-            {'name': 'cabinet_num', 'text': '机柜号', 'condition_type': 'input'},
-            {'name': 'device_type_id', 'text': '资产类型', 'condition_type': 'select', 'global_name': 'device_type_list'},
-            {'name': 'device_status_id', 'text': '资产状态', 'condition_type': 'select', 'global_name': 'device_status_list'},
+            {'name': 'name', 'text': '业务线', 'condition_type': 'select', 'global_bame': "name_list"},
         ]
 
         # 表格的配置
@@ -303,26 +302,10 @@ class Business(BaseServiceList):
         extra_select = {}
         super(Business, self).__init__(condition_config, table_config, extra_select)
 
-    @property
-    def device_status_list(self):
-        result = map(lambda x: {'id': x[0], 'name': x[1]}, models.Asset.device_status_choices)
-        return list(result)
-
-    @property
-    def device_type_list(self):
-        result = map(lambda x: {'id': x[0], 'name': x[1]}, models.Asset.device_type_choices)
-        return list(result)
-
-    @property
-    def idc_list(self):
-        values = models.IDC.objects.only('id', 'name', 'floor')
-        result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
-        return list(result)
-
-    @property
-    def business_unit_list(self):
-        values = models.BusinessUnit.objects.values('id', 'name')
-        return list(values)
+    # @property
+    # def name_list(self):
+    #     result = map(lambda x: {'id': x[0], 'name': x[1]}, models.BusinessUnit.objects.)
+    #     return list(result)
 
     @staticmethod
     def business_condition(request):
@@ -360,12 +343,9 @@ class Business(BaseServiceList):
                 "page_str": page_info.pager(),
                 "page_start": page_info.start,
             }
-            ret['global_dict'] = {
-                'device_status_list': self.device_status_list,
-                'device_type_list': self.device_type_list,
-                'idc_list': self.idc_list,
-                'business_unit_list': self.business_unit_list
-            }
+            # ret['global_dict'] = {
+            #     'name_list': self.name_list,
+            # }
             response.data = ret
             response.message = '获取成功'
         except Exception as e:
