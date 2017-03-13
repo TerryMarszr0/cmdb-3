@@ -4,7 +4,10 @@ from django.contrib import admin
 from web.views import account
 from web.views import home
 from web.views import asset
+from web.views import business
 from web.views import user
+from web.views import idc
+
 
 urlpatterns = [
     url(r'^login.html$', account.LoginView.as_view()),
@@ -14,6 +17,8 @@ urlpatterns = [
     url(r'^index.html$', home.IndexView.as_view()),
     url(r'^cmdb.html$', home.CmdbView.as_view()),
 
+
+    # 资产管理
     url(r'^asset.html$', asset.AssetListView.as_view()),
     url(r'^assets.html$', asset.AssetJsonView.as_view()),
     url(r'^asset-(?P<device_type_id>\d+)-(?P<asset_nid>\d+).html$', asset.AssetDetailView.as_view()),
@@ -21,12 +26,16 @@ urlpatterns = [
     url(r'^add-asset.html$', asset.AddAssetView.as_view()),
 
 
+    #  业务线管理
+    url(r'^business.html$', business.BusinessListView.as_view()),
+    url(r'^business-json.html$', business.BusinessJsonView.as_view()),
 
-    url(r'^business.html$', asset.BusinessListView.as_view()),
-    url(r'^business-json.html$', asset.BusinessJsonView.as_view()),
+    #  IDC管理
+    url(r'^idc.html$', idc.IdcListView.as_view()),
+    url(r'^idc-json.html$', idc.IdcJsonView.as_view()),
 
 
-
+    # 用户管理
     url(r'^users.html$', user.UserListView.as_view()),
     url(r'^user.html$', user.UserJsonView.as_view()),
 
