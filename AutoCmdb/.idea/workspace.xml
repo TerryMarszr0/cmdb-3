@@ -61,18 +61,17 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/service/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="169" column="36" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
+            <state relative-caret-position="270">
+              <caret line="170" column="17" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
               <folding>
                 <element signature="e#45#56#0" expanded="true" />
-                <element signature="e#6804#6889#0" expanded="false" />
-                <element signature="e#6952#7402#0" expanded="false" />
-                <element signature="e#8841#9232#0" expanded="false" />
-                <element signature="e#9289#10234#0" expanded="false" />
-                <element signature="e#10312#10767#0" expanded="false" />
-                <marker date="1489391551000" expanded="true" signature="5218:5347" ph="select hostn... repository_server" />
-                <marker date="1489391551000" expanded="true" signature="5380:5528" ph="select manag... repository_networkdevice" />
-                <marker date="1489391551000" expanded="false" signature="7440:8781" ph="..." />
+                <element signature="e#6896#6981#0" expanded="false" />
+                <element signature="e#7044#7494#0" expanded="false" />
+                <element signature="e#8933#9324#0" expanded="false" />
+                <element signature="e#9381#10326#0" expanded="false" />
+                <element signature="e#10404#10859#0" expanded="false" />
+                <marker date="1489391728000" expanded="true" signature="5218:5347" ph="select hostn... repository_server" />
+                <marker date="1489391728000" expanded="true" signature="5380:5528" ph="select manag... repository_networkdevice" />
               </folding>
             </state>
           </provider>
@@ -1062,18 +1061,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/service/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="169" column="36" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
+        <state relative-caret-position="270">
+          <caret line="170" column="17" selection-start-line="170" selection-start-column="17" selection-end-line="170" selection-end-column="17" />
           <folding>
             <element signature="e#45#56#0" expanded="true" />
-            <element signature="e#6804#6889#0" expanded="false" />
-            <element signature="e#6952#7402#0" expanded="false" />
-            <element signature="e#8841#9232#0" expanded="false" />
-            <element signature="e#9289#10234#0" expanded="false" />
-            <element signature="e#10312#10767#0" expanded="false" />
-            <marker date="1489391551000" expanded="true" signature="5218:5347" ph="select hostn... repository_server" />
-            <marker date="1489391551000" expanded="true" signature="5380:5528" ph="select manag... repository_networkdevice" />
-            <marker date="1489391551000" expanded="false" signature="7440:8781" ph="..." />
+            <element signature="e#6896#6981#0" expanded="false" />
+            <element signature="e#7044#7494#0" expanded="false" />
+            <element signature="e#8933#9324#0" expanded="false" />
+            <element signature="e#9381#10326#0" expanded="false" />
+            <element signature="e#10404#10859#0" expanded="false" />
+            <marker date="1489391728000" expanded="true" signature="5218:5347" ph="select hostn... repository_server" />
+            <marker date="1489391728000" expanded="true" signature="5380:5528" ph="select manag... repository_networkdevice" />
           </folding>
         </state>
       </provider>
