@@ -306,7 +306,6 @@ class HandleDisk(object):
         response = BaseResponse()
         try:
             disk_info = server_info['disk']
-            print(disk_info)
             if not disk_info['status']:
                 response.status = False
                 models.ErrorLog.objects.create(asset_obj=server_obj.asset, title='disk-agent',
@@ -319,15 +318,13 @@ class HandleDisk(object):
 
             disk_slots = map(lambda x: x, (item.slot for item in disk_obj_list))
 
-            print("-" * 100)
-            print(set(disk_slots))
-
             update_list = agorithm.get_intersection(set(client_disk_dict.keys()), set(disk_slots))
             add_list = agorithm.get_exclude(client_disk_dict.keys(), update_list)
             del_list = agorithm.get_exclude(disk_slots, update_list)
 
+            print("hostname: ", server_info['hostname'], "update_list: ", update_list)
+
             HandleDisk._add_disk(add_list, client_disk_dict, server_obj, user_obj)
-            print("+" * 100)
             HandleDisk._update_disk(update_list, disk_obj_list, client_disk_dict, server_obj, user_obj)
             HandleDisk._del_disk(del_list, disk_obj_list, server_obj, user_obj)
 
