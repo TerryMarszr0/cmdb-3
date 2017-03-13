@@ -166,7 +166,7 @@ class Asset(BaseServiceList):
                 if tag_text:
                     tag_text += ",%s" % tag
                 else:
-                    tag_text += tag
+                    tag_text = tag
             result.append(
                 {
                     'id': i.id,
@@ -211,7 +211,6 @@ class Asset(BaseServiceList):
             asset_count = models.Asset.objects.filter(conditions).count()   # 根据搜索条件统计搜索总数量
             page_info = PageInfo(request.GET.get('pager', None), asset_count)   # 使用 PageInfo 构造 分页
             asset_list = models.Asset.objects.filter(conditions).extra(select=self.extra_select).values(*self.values_list)[page_info.start:page_info.end]
-
 
             ret['table_config'] = self.table_config
             ret['condition_config'] = self.condition_config
