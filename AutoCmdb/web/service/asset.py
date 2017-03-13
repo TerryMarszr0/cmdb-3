@@ -131,9 +131,7 @@ class Asset(BaseServiceList):
     @property
     def idc_list(self):
         values = models.IDC.objects.only('id', 'name', 'floor')
-        print(values)
         result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
-        print(list(result))
         return list(result)
 
     @property
@@ -304,7 +302,8 @@ class Business(BaseServiceList):
 
     @property
     def name_list(self):
-        result = map(lambda x: {'id': x[0], 'name': x[1]}, models.BusinessUnit.objects.all().values('name'))
+        result = models.BusinessUnit.objects.all().values('name')
+        # result = map(lambda x: {'id': x[0], 'name': x[1]}, models.BusinessUnit.objects.all().values('name'))
         print(list(result))
         return list(result)
 
