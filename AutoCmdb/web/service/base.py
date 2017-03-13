@@ -4,8 +4,6 @@ import json
 from django.db.models import Q
 
 
-
-
 class BaseServiceList(object):
     def __init__(self, condition_config, table_config, extra_select):
         # 查询条件的配置，列表
@@ -22,7 +20,6 @@ class BaseServiceList(object):
         }
         """
         self.table_config = table_config
-
 
         # 额外搜索条件，字典
         self.extra_select = extra_select

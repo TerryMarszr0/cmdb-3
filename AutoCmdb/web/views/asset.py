@@ -36,3 +36,23 @@ class AssetDetailView(View):
 class AddAssetView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'add_asset.html')
+
+
+class BusinessListView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'business_list.html')
+
+
+class BusinessJsonView(View):
+    def get(self, request):
+        obj = asset.Business()
+        response = obj.fetch_business(request)
+        return JsonResponse(response.__dict__)
+
+    def delete(self, request):
+        response = asset.Asset.delete_assets(request)
+        return JsonResponse(response.__dict__)
+
+    def put(self, request):
+        response = asset.Asset.put_assets(request)
+        return JsonResponse(response.__dict__)

@@ -705,7 +705,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#45#54#0" expanded="true" />
+            <element signature="e#45#54#0" expanded="false" />
             <element signature="e#2154#2286#0" expanded="false" />
             <element signature="e#2933#4527#0" expanded="false" />
             <element signature="e#3089#3390#0" expanded="false" />
@@ -720,7 +720,7 @@
         <state relative-caret-position="0">
           <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
           <folding>
-            <element signature="e#45#54#0" expanded="true" />
+            <element signature="e#45#54#0" expanded="false" />
             <element signature="e#2154#2286#0" expanded="false" />
             <element signature="e#2933#4527#0" expanded="false" />
             <element signature="e#3089#3390#0" expanded="false" />
@@ -941,7 +941,7 @@
         <state relative-caret-position="75">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#89#126#0" expanded="true" />
+            <element signature="e#89#126#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -967,7 +967,7 @@
         <state relative-caret-position="228">
           <caret line="100" column="11" selection-start-line="100" selection-start-column="11" selection-end-line="100" selection-end-column="11" />
           <folding>
-            <element signature="e#45#54#0" expanded="true" />
+            <element signature="e#45#54#0" expanded="false" />
             <element signature="e#2154#2286#0" expanded="false" />
             <element signature="e#2933#4527#0" expanded="false" />
             <element signature="e#3089#3390#0" expanded="false" />
@@ -1027,7 +1027,7 @@
         <state relative-caret-position="195">
           <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
           <folding>
-            <element signature="e#45#54#0" expanded="true" />
+            <element signature="e#45#54#0" expanded="false" />
           </folding>
         </state>
       </provider>

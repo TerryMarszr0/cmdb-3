@@ -21,6 +21,12 @@ urlpatterns = [
     url(r'^add-asset.html$', asset.AddAssetView.as_view()),
 
 
+
+    url(r'^business.html$', asset.BusinessListView.as_view()),
+    url(r'^business-json.html$', asset.BusinessJsonView.as_view()),
+
+
+
     url(r'^users.html$', user.UserListView.as_view()),
     url(r'^user.html$', user.UserJsonView.as_view()),
 
