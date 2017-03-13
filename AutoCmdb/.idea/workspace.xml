@@ -61,17 +61,19 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/service/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="172" column="25" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
+            <state relative-caret-position="62">
+              <caret line="151" column="40" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
               <folding>
                 <element signature="e#45#56#0" expanded="true" />
-                <element signature="e#6930#7015#0" expanded="false" />
-                <element signature="e#7078#7528#0" expanded="false" />
-                <element signature="e#8966#9357#0" expanded="false" />
-                <element signature="e#9414#10359#0" expanded="false" />
-                <element signature="e#10437#10892#0" expanded="false" />
-                <marker date="1489392183000" expanded="true" signature="5218:5347" ph="select hostn... repository_server" />
-                <marker date="1489392183000" expanded="true" signature="5380:5528" ph="select manag... repository_networkdevice" />
+                <element signature="e#6048#6261#0" expanded="false" />
+                <element signature="e#6312#6885#0" expanded="false" />
+                <element signature="e#6943#7028#0" expanded="false" />
+                <element signature="e#7091#7541#0" expanded="false" />
+                <element signature="e#8979#9370#0" expanded="false" />
+                <element signature="e#9427#10372#0" expanded="false" />
+                <element signature="e#10450#10905#0" expanded="false" />
+                <marker date="1489392685000" expanded="true" signature="5245:5374" ph="select hostn... repository_server" />
+                <marker date="1489392685000" expanded="true" signature="5407:5555" ph="select manag... repository_networkdevice" />
               </folding>
             </state>
           </provider>
@@ -633,7 +635,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1061,17 +1063,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/service/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="172" column="25" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
+        <state relative-caret-position="62">
+          <caret line="151" column="40" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
           <folding>
             <element signature="e#45#56#0" expanded="true" />
-            <element signature="e#6930#7015#0" expanded="false" />
-            <element signature="e#7078#7528#0" expanded="false" />
-            <element signature="e#8966#9357#0" expanded="false" />
-            <element signature="e#9414#10359#0" expanded="false" />
-            <element signature="e#10437#10892#0" expanded="false" />
-            <marker date="1489392183000" expanded="true" signature="5218:5347" ph="select hostn... repository_server" />
-            <marker date="1489392183000" expanded="true" signature="5380:5528" ph="select manag... repository_networkdevice" />
+            <element signature="e#6048#6261#0" expanded="false" />
+            <element signature="e#6312#6885#0" expanded="false" />
+            <element signature="e#6943#7028#0" expanded="false" />
+            <element signature="e#7091#7541#0" expanded="false" />
+            <element signature="e#8979#9370#0" expanded="false" />
+            <element signature="e#9427#10372#0" expanded="false" />
+            <element signature="e#10450#10905#0" expanded="false" />
+            <marker date="1489392685000" expanded="true" signature="5245:5374" ph="select hostn... repository_server" />
+            <marker date="1489392685000" expanded="true" signature="5407:5555" ph="select manag... repository_networkdevice" />
           </folding>
         </state>
       </provider>

@@ -124,14 +124,14 @@ class Asset(BaseServiceList):
                 'attr': {}
             },
         ]
-        # 额外搜索条件
+        # 额外搜索条件,这个地方也可以放入全局变量, 然后通过 @@ 来获取
         extra_select = {
             'server_title': 'select hostname from repository_server where repository_server.asset_id=repository_asset.id and repository_asset.device_type_id=1',
             'network_title': 'select management_ip from repository_networkdevice where repository_networkdevice.asset_id=repository_asset.id and repository_asset.device_type_id=2',
         }
         super(Asset, self).__init__(condition_config, table_config, extra_select)
 
-
+    # 全局变量
     @property
     def device_status_list(self):
         result = map(lambda x: {'id': x[0], 'name': x[1]}, models.Asset.device_status_choices)
@@ -173,9 +173,6 @@ class Asset(BaseServiceList):
                     'name': tag_text,
                 }
             )
-
-        print(result)
-
         return result
 
     @property
