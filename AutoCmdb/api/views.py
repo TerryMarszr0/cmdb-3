@@ -43,7 +43,6 @@ class AssetView(View):
         # return JsonResponse(test, json_dumps_params={"ensure_ascii": False})
 
         response = asset.get_untreated_servers()
-        print(response.__dict__)
         return JsonResponse(response.__dict__)
 
     @method_decorator(auth.api_auth)
@@ -69,7 +68,6 @@ class AssetView(View):
             ret['message'] = '[%s]资产不存在' % hostname
             return JsonResponse(ret)
 
-        print(server_info)
         for k, v in config.PLUGINS_DICT.items():
             module_path, cls_name = v.rsplit('.', 1)
             cls = getattr(importlib.import_module(module_path), cls_name)

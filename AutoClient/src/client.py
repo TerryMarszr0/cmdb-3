@@ -59,7 +59,6 @@ class AutoBase(object):
                 headers=headers
             )
         except Exception as e:
-            print(e)
             response = e
 
         return response.json()
@@ -71,7 +70,6 @@ class AutoBase(object):
         :param callback:
         :return:
         """
-        print("msg -----> ", msg)
         status = True
         try:
             headers = {}
@@ -101,7 +99,6 @@ class AutoBase(object):
         :param response: 请求成功，则是响应内容对象；请求错误，则是异常对象
         :return:
         """
-        print(response)
         if not status:
             Logger().log(str(response), False)
             return
@@ -263,7 +260,6 @@ class threadPool(object):
                 t = threading.Thread(target=func, args=args)
                 t.start()
                 self.thread_list.append(t)  # 将线程对象放入列表中
-                print("当前线程数: ", threading.active_count())
                 break
 
     def shutdown(self, wait=True):

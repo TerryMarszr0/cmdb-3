@@ -17,11 +17,9 @@ class BasePlugin(object):
         self.hostname = hostname
 
     def salt(self, cmd, ):
-        print(cmd)
         import salt.client
         local = salt.client.LocalClient()
         result = local.cmd(self.hostname, 'cmd.run', [cmd])
-        print("result --> ", result)
         return result[self.hostname]
 
     def ssh(self, cmd):

@@ -42,7 +42,6 @@ def api_auth_method(request):
 
     # 循环一下存放已经访问的 加密字符串和时间戳列表
     for k, v in enumerate(ENCRYPT_LIST):
-        print(k, v)
         m = v['time']
         n = v['encrypt']
         if m < limit_timestamp:     # 判断时间是否已经过期,如果过期则加入到需要删除的列表中
@@ -53,8 +52,7 @@ def api_auth_method(request):
 
     for k in del_keys:              # 清除需要清除的 加密字符串和时间戳
         if len(ENCRYPT_LIST) > 2:
-            print(".....ENCRYPT_LIST length: ", len(ENCRYPT_LIST))
-            if k in ENCRYPT_LIST:
+            if k in ENCRYPT_LIST:   # 由于客户端在提交数据的时候都会删该列表,容易出现问题,所以这个地方加个判断,改用 redis 来存储就不会出现该问题了
                 del ENCRYPT_LIST[k]
 
     if exist:   # 如果为真,说明加密字符串已经存在
