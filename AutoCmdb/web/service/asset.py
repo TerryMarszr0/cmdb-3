@@ -249,7 +249,7 @@ class Business(BaseServiceList):
     def __init__(self):
         # 查询条件的配置
         condition_config = [
-            {'name': 'name', 'text': '业务线', 'condition_type': 'select', 'global_name': "name_list"},
+            {'name': 'id', 'text': '业务线', 'condition_type': 'select', 'global_name': "name_list"},
         ]
 
         # 表格的配置
