@@ -17,7 +17,7 @@ class AssetJsonView(View):
         obj = asset.Asset()
         response = obj.fetch_assets(request)
 
-        print(JsonResponse(response.__dict__))
+        print(response.__dict__)
         return JsonResponse(response.__dict__)
 
     def delete(self, request):
