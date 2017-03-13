@@ -146,7 +146,6 @@ class Asset(BaseServiceList):
     def idc_list(self):
         values = models.IDC.objects.only('id', 'name', 'floor')
         result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
-        print("result: ", list(result))
         return list(result)
 
     def tag_name_list(self, asset_list):
