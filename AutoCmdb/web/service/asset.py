@@ -279,10 +279,10 @@ class Business(BaseServiceList):
                 'attr': {}
             },
             {
-                'q': 'manager_name',
+                'q': 'manager__name',
                 'title': "系统管理员",
                 'display': 1,
-                'text': {'content': "{n}", 'kwargs': {'n': '@network_title'}},
+                'text': {'content': "{n}", 'kwargs': {'n': '@manager__name'}},
                 'attr': {}
             },
             {
