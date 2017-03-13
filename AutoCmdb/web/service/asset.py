@@ -174,6 +174,8 @@ class Asset(BaseServiceList):
                 }
             )
 
+            print(result)
+
         return result
 
     @property
