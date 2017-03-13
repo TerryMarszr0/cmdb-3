@@ -5,7 +5,6 @@ from django.shortcuts import render
 from django.http import JsonResponse
 
 from web.service import asset
-from web.service import business
 
 
 class AssetListView(View):
