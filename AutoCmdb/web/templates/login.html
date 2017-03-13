@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运维自动化管理平台</title>
+
+    <style>
+        .error-p{
+            padding-top: 5px;
+            color: red;
+            text-align: left;
+        }
+
+        .length60{
+            width: 60px;
+            display: inline-block;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/login.html" method="post">
+        {% csrf_token %}
+        <div>
+            <p class="length60">用户名: </p>
+            <input type="text" name="username" />
+            <span class="error-p">{{ obj.errors.username.0 }}</span>
+        </div>
+        <div>
+            <p class="length60">密&nbsp;&nbsp;码: </p>
+            <input type="password" name="password" />
+            <span class="error-p">{{ obj.errors.password.0 }}</span>
+        </div>
+        <div>
+            <input type="submit" value="登录">
+        </div>
+
+
+    </form>
+</body>
+</html>
