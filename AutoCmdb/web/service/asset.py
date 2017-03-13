@@ -311,7 +311,6 @@ class Business(BaseServiceList):
     def business_condition(request):
         """根据搜索条件构造 q 对象"""
         con_str = request.GET.get('condition', None)
-        print(con_str)
         if not con_str:
             con_dict = {}
         else:
@@ -332,6 +331,7 @@ class Business(BaseServiceList):
         try:
             ret = {}
             conditions = self.business_condition(request)     # 根据搜索条件构造 q 对象
+            print(conditions)
             asset_count = models.BusinessUnit.objects.filter(conditions).count()   # 根据搜索条件统计搜索总数量
             page_info = PageInfo(request.GET.get('pager', None), asset_count)   # 使用 PageInfo 构造 分页
             asset_list = models.BusinessUnit.objects.filter(conditions).extra(select=self.extra_select).values(*self.values_list)[page_info.start:page_info.end]
