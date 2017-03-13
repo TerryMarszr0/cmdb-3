@@ -153,7 +153,9 @@ class Asset(BaseServiceList):
 
         for i in asset_list:
             id_list.append(i['id'])
-        print(id_list)
+
+        obj = models.Asset.objects.filter(id__in=id_list)
+        print(obj)
 
         return True
 
