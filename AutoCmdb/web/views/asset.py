@@ -37,8 +37,7 @@ class AddAssetView(View):
     def get(self, request, *args, **kwargs):
         response = asset.Asset.add_assets(request)
 
-        for k,v in response.data.items():
-            print(k, v)
+        print(response.data.__dict__)
 
         return render(request, 'add_asset.html', {'data': response.data})
 
