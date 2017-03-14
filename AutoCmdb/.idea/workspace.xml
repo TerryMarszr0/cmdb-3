@@ -31,21 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="add_asset.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add_asset.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/templates/add_asset.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="300">
               <caret line="20" column="76" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asset.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/views/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="510">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding>
                 <element signature="e#45#74#0" expanded="true" />
               </folding>
@@ -56,8 +56,8 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/service/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="297" column="28" selection-start-line="297" selection-start-column="28" selection-end-line="297" selection-end-column="28" />
+            <state relative-caret-position="241">
+              <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
               <folding>
                 <element signature="e#45#56#0" expanded="true" />
                 <element signature="e#6370#6943#0" expanded="false" />
@@ -65,8 +65,8 @@
                 <element signature="e#7285#7735#0" expanded="false" />
                 <element signature="e#9749#10694#0" expanded="false" />
                 <element signature="e#10772#11227#0" expanded="false" />
-                <marker date="1489484904000" expanded="true" signature="5344:5473" ph="select hostn... repository_server" />
-                <marker date="1489484904000" expanded="true" signature="5506:5654" ph="select manag... repository_networkdevice" />
+                <marker date="1489485252000" expanded="true" signature="5344:5473" ph="select hostn... repository_server" />
+                <marker date="1489485252000" expanded="true" signature="5506:5654" ph="select manag... repository_networkdevice" />
               </folding>
             </state>
           </provider>
@@ -152,9 +152,9 @@
         <option value="$PROJECT_DIR$/web/templates/layout/_layout.html" />
         <option value="$PROJECT_DIR$/web/urls.py" />
         <option value="$PROJECT_DIR$/repository/models.py" />
-        <option value="$PROJECT_DIR$/web/service/asset.py" />
-        <option value="$PROJECT_DIR$/web/views/asset.py" />
         <option value="$PROJECT_DIR$/web/templates/add_asset.html" />
+        <option value="$PROJECT_DIR$/web/views/asset.py" />
+        <option value="$PROJECT_DIR$/web/service/asset.py" />
       </list>
     </option>
   </component>
@@ -1086,10 +1086,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/add_asset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="76" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/service/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="297" column="28" selection-start-line="297" selection-start-column="28" selection-end-line="297" selection-end-column="28" />
+        <state relative-caret-position="241">
+          <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
           <folding>
             <element signature="e#45#56#0" expanded="true" />
             <element signature="e#6370#6943#0" expanded="false" />
@@ -1097,27 +1105,19 @@
             <element signature="e#7285#7735#0" expanded="false" />
             <element signature="e#9749#10694#0" expanded="false" />
             <element signature="e#10772#11227#0" expanded="false" />
-            <marker date="1489484904000" expanded="true" signature="5344:5473" ph="select hostn... repository_server" />
-            <marker date="1489484904000" expanded="true" signature="5506:5654" ph="select manag... repository_networkdevice" />
+            <marker date="1489485252000" expanded="true" signature="5344:5473" ph="select hostn... repository_server" />
+            <marker date="1489485252000" expanded="true" signature="5506:5654" ph="select manag... repository_networkdevice" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="510">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding>
             <element signature="e#45#74#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/templates/add_asset.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="76" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>

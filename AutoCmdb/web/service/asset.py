@@ -294,8 +294,7 @@ class Asset(BaseServiceList):
             response.message = str(e)
         return response
 
-    @staticmethod
-    def add_assets(request):
+    def add_assets(self, request):
         response = BaseResponse()
         ret = {
             'device_status_list': Asset.device_status_list,
