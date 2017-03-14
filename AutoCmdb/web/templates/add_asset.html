@@ -16,7 +16,7 @@
         <li class="active">添加资产</li>
     </ol>
     <div style="padding: 50px 0 40px 10px;">
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="post" action="#">
             {% csrf_token %}
             <div class="form-group">
                 <label for="id_device_type_id" class="col-sm-2 control-label">资产类型: </label>
@@ -89,16 +89,11 @@
                         <div>
                             <input type="checkbox" value="{{ i.id }}" name="tag"> {{ i.name }}
                         </div>
-{#                            <option value="{{ i.id }}">{{ i.name }}</option>#}
                     {% endfor %}
-
-{#                    <select multiple="multiple" id="id_tag" name="tag">#}
-{#                        {% for i in data.tag_name_list %}#}
-{#                            <option value="{{ i.id }}">{{ i.name }}</option>#}
-{#                        {% endfor %}#}
-{#                    </select>#}
                 </div>
             </div>
+            <button type="submit" class="btn btn-success" >添加</button>
+
         </form>
 
 
