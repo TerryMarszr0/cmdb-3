@@ -292,4 +292,3 @@ class Asset(BaseServiceList):
             response.message = str(e)
         return response
 
-

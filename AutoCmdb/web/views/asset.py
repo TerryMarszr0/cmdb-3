@@ -35,6 +35,11 @@ class AssetDetailView(View):
 
 class AddAssetView(View):
     def get(self, request, *args, **kwargs):
+
         return render(request, 'add_asset.html')
+
+
+
+
 
 
