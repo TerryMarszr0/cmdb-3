@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 from django.views import View
 from django.shortcuts import render
+from django.shortcuts import redirect
 from django.http import JsonResponse
 
 from web.service import asset
@@ -38,6 +39,11 @@ class AddAssetView(View):
         obj = asset.Asset()
         response = obj.add_assets(request)
         return render(request, 'add_asset.html', {'data': response.data})
+
+    def post(self, request, *args, **kwargs):
+
+        print(request.POST)
+        return redirect('/asset.html')
 
 
 
