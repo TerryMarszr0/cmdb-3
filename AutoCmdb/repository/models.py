@@ -104,8 +104,8 @@ class Asset(models.Model):
         (4, '下架'),
     )
 
-    device_type_id = models.IntegerField(choices=device_type_choices, default=1)
-    device_status_id = models.IntegerField(choices=device_status_choices, default=1)
+    device_type_id = models.IntegerField(verbose_name="资产类型", choices=device_type_choices, default=1)
+    device_status_id = models.IntegerField(verbose_name="资产状态", choices=device_status_choices, default=1)
 
     cabinet_num = models.CharField('机柜号', max_length=30, null=True, blank=True)
     cabinet_order = models.CharField('机柜中序号', max_length=30, null=True, blank=True)

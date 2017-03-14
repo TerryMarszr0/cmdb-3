@@ -230,7 +230,9 @@ class Asset(BaseServiceList):
                 'tagName_list': self.tagName_list(ret['data_list']),   # 用作资产表中 对应的标签名称
                 'tag_name_list': self.tag_name_list,   # 用作搜索条件处显示标签名称搜索条件
             }
+
             response.data = ret
+            response.status = True
             response.message = '获取成功'
         except Exception as e:
             response.status = False
@@ -291,4 +293,27 @@ class Asset(BaseServiceList):
             response.status = False
             response.message = str(e)
         return response
+
+    @staticmethod
+    def add_assets(request):
+        response = BaseResponse()
+        ret = {
+            'device_status_list': Asset.device_status_list,
+            'device_type_list': Asset.device_type_list,
+            'idc_list': Asset.idc_list,
+            'business_unit_list': Asset.business_unit_list,
+            'tag_name_list': Asset.tag_name_list,
+        }
+
+        response.data = ret
+        response.status = True
+        return response
+
+
+
+
+
+
+
+
 

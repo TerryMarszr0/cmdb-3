@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 
 from web.service import asset
-
+from utils.response import BaseResponse
 
 class AssetListView(View):
     def get(self, request, *args, **kwargs):
@@ -35,6 +35,8 @@ class AssetDetailView(View):
 
 class AddAssetView(View):
     def get(self, request, *args, **kwargs):
+        response = asset.Asset.add_assets(request)
+        print(response.__dict__)
 
         return render(request, 'add_asset.html')
 
