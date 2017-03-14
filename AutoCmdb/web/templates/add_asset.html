@@ -84,9 +84,11 @@
 
             <div class="form-group">
                 <label for="id_tag" class="col-sm-2 control-label">业务线: </label>
-                <div class="col-sm-2">
+                <div class="col-sm-4" style="margin-top: 5px;">
                     {% for i in data.tag_name_list %}
-                        <input type="checkbox" value="{{ i.id }}" name="tag"> {{ i.name }}
+                        <div>
+                            <input type="checkbox" value="{{ i.id }}" name="tag"> {{ i.name }}
+                        </div>
 {#                            <option value="{{ i.id }}">{{ i.name }}</option>#}
                     {% endfor %}
 
