@@ -16,7 +16,8 @@ class IDC(BaseServiceList):
     def __init__(self):
         # 查询条件的配置
         condition_config = [
-
+            {'name': 'name', 'text': '机房', 'condition_type': 'input'},
+            {'name': 'floor', 'text': '楼层', 'condition_type': 'input'},
         ]
 
         # 表格的配置
