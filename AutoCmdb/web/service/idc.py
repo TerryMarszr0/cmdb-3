@@ -18,7 +18,7 @@ class IDC(BaseServiceList):
         condition_config = [
             {'name': 'name', 'text': '机房', 'condition_type': 'input'},
             {'name': 'floor', 'text': '楼层', 'condition_type': 'input'},
-            
+
         ]
 
         # 表格的配置
@@ -47,7 +47,7 @@ class IDC(BaseServiceList):
             {
                 'q': None,
                 'title': "选项",
-                'display': 1,
+                'display': 0,
                 'text': {
                     'content': "<a href='/asset-{device_type_id}-{nid}.html'>查看详细</a> | <a href='/edit-asset-{device_type_id}-{nid}.html'>编辑</a>",
                     'kwargs': {'device_type_id': '@device_type_id', 'nid': '@id'}},
