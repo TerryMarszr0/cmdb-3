@@ -35,9 +35,10 @@ class AssetDetailView(View):
 
 class AddAssetView(View):
     def get(self, request, *args, **kwargs):
-        obj = asset.Asset()
-        response = obj.add_assets(request)
-        print(response.data)
+        response = asset.Asset.add_assets(request)
+
+        for i in response.data:
+            print(i)
 
         return render(request, 'add_asset.html', {'data': response.data})
 
