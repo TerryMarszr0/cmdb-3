@@ -17,7 +17,9 @@
                 <label for="inputPassword" class="col-sm-2 control-label">资产类型</label>
                 <div class="col-sm-10">
                     <select id="id_device_type_id" name="device_type_id" required="">
-
+                        {% for i in data.device_type_list %}
+                            <option value="{{ i.id }}">{{ i.name }}</option>
+                        {% endfor %}
                     </select>
                 </div>
             </div>
