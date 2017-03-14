@@ -34,9 +34,11 @@
       <file leaf-file-name="add_asset.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/templates/add_asset.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
-              <folding />
+            <state relative-caret-position="330">
+              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+              <folding>
+                <element signature="e#370#395#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1116,9 +1118,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/add_asset.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <element signature="e#370#395#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
