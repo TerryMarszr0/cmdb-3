@@ -91,6 +91,7 @@ class AddAssetForm(Form):
     )
 
     tag = MultipleChoiceField(
+        required=False,
         choices=models.Tag.objects.all().values_list('id', 'name'),
         widget=widgets.CheckboxSelectMultiple
     )

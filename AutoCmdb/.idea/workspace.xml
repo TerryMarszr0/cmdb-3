@@ -34,21 +34,11 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/views/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="122" column="31" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
+            <state relative-caret-position="391">
+              <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
               <folding>
                 <element signature="e#45#74#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/django/forms/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1143,8 +1133,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="122" column="31" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
+        <state relative-caret-position="391">
+          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
           <folding>
             <element signature="e#45#74#0" expanded="true" />
           </folding>
