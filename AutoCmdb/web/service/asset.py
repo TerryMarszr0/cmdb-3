@@ -146,9 +146,17 @@ class Asset(BaseServiceList):
 
     @property
     def idc_list(self):
-        values = models.IDC.objects.only('id', 'name', 'floor')
-        result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
-        return list(result)
+        values = models.IDC.objects.all().values('id', 'name', 'floor')
+        idc_values = []
+        for i in values:
+            if i.floor:
+                idc_values.append({'id': i.id, 'name': "%s-%s层" % (i.name, i.floor)})
+            else:
+                idc_values.append({'id': i.id, 'name': i.name})
+        #
+        # values = models.IDC.objects.only('id', 'name', 'floor')
+        # result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
+        return idc_values
 
     def tagName_list(self, asset_list):
         """获取标签"""
