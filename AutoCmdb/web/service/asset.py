@@ -18,6 +18,7 @@ class Asset(BaseServiceList):
             {'name': 'device_type_id', 'text': '资产类型', 'condition_type': 'select', 'global_name': 'device_type_list'},
             {'name': 'device_status_id', 'text': '资产状态', 'condition_type': 'select', 'global_name': 'device_status_list'},
             {'name': 'tag__id', 'text': '标签名称', 'condition_type': 'select', 'global_name': 'tag_name_list'},
+            {'name': 'idc__id', 'text': '标签名称', 'condition_type': 'select', 'global_name': 'idc_list'},
         ]
 
         # 表格的配置
