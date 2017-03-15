@@ -26,7 +26,7 @@ class IDC(BaseServiceList):
             {
                 'q': 'id',  # 用于数据库查询的字段，即Model.Tb.objects.filter(*[])
                 'title': "ID",  # 前段表格中显示的标题
-                'display': 1,  # 是否在前端显示，0表示在前端不显示, 1表示在前端隐藏, 2表示在前端显示
+                'display': 0,  # 是否在前端显示，0表示在前端不显示, 1表示在前端隐藏, 2表示在前端显示
                 'text': {'content': "{id}", 'kwargs': {'id': '@id'}},
                 'attr': {}  # 自定义属性
             },

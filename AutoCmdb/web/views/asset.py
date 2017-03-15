@@ -140,22 +140,9 @@ class AddAssetView(View):
 
                 models.Server.objects.create(hostname=hostname, asset_id=obj.id)
 
-                # Asset_obj = models.Asset.objects.filter(id=obj.id).first()
                 if tag_list:
-                    tag_create_list = []
-                    print(tag_list)
-                    # for tag in tag_list:
-                    #     # Asset_obj.tag.create(id=)
-                    #     # obj.tag.id = tag
-                    #     # obj.save()
-                    #     # Asset_obj.tag.id = tag
-
-                    Tag_obj = models.Tag.objects.filter(id__in=tag_list)
-                    obj.tag.add(*Tag_obj)
-
-                        # tag_create_list.append(models.Tag(id=tag))
-
-                    # obj.tag.bulk_create(tag_create_list)
+                    tag_obj = models.Tag.objects.filter(id__in=tag_list)
+                    obj.tag.add(*tag_obj)
 
                 return redirect('/asset.html')
 
