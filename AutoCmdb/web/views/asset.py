@@ -136,9 +136,9 @@ class AddAssetView(View):
                 obj.errors['hostname'] = ["主机名已存在"]
             else:
                 tag = obj.cleaned_data.pop('tag')
-                print(obj.cleaned_data)
 
-
+                obj = models.Asset.objects.create(**obj.cleaned_data)
+                
                 return redirect('/asset.html')
 
         else:
