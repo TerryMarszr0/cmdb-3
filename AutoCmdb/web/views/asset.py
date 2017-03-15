@@ -107,9 +107,7 @@ class AddAssetForm(Form):
 class AddAssetView(View):
     def get(self, request, *args, **kwargs):
         obj = AddAssetForm()
-
-        referrer = request.META['HTTP_REFERER']
-        return render(request, 'add_asset.html', {'obj': obj, 'referrer': referrer})
+        return render(request, 'add_asset.html', {'obj': obj})
 
     def post(self, request, *args, **kwargs):
 
