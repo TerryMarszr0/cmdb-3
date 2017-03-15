@@ -150,10 +150,10 @@ class Asset(BaseServiceList):
         print(values)
         idc_values = []
         for i in values:
-            if i.floor:
-                idc_values.append({'id': i.id, 'name': "%s-%s层" % (i.name, i.floor)})
+            if i['floor']:
+                idc_values.append({'id': i['id'], 'name': "%s-%s层" % (i['name'], i['floor'])})
             else:
-                idc_values.append({'id': i.id, 'name': i.name})
+                idc_values.append({'id': i['id'], 'name': i['name']})
         print(idc_values)
         #
         # values = models.IDC.objects.only('id', 'name', 'floor')
