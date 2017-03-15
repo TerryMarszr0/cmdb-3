@@ -114,6 +114,7 @@ class AddAssetView(View):
         return render(request, 'add_asset.html', {'obj': obj})
 
     def post(self, request, *args, **kwargs):
+        print("-" * 100)
         response = BaseResponse
 
         obj = AddAssetForm(request)
