@@ -63,7 +63,7 @@ class AddAssetForm(Form):
             "required": "主机名不能为空",
         },
         widget=widgets.Input(
-            attrs={"class": "form-control", "name": "hostname", "type": "text"})
+            attrs={"class": "form-control", "name": "hostname", "type": "text", "novalidate": "false"})
     )
 
     cabinet_num = fields.CharField(
