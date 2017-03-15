@@ -122,14 +122,21 @@ class AddAssetView(View):
 
         if obj.is_valid():
             print(request.POST)
-            return redirect('/asset.html')
+            hostname = request.POST
+            Server_obj = models.Server.objects.filter(hostname=hostname)
+            if Server_obj:  # 判断主机名是否存在
+                # 主机名已经存在
+                obj.errors['hostname'] = "主机名已存在"
+            else:
+                return redirect('/asset.html')
+
         else:
             print(obj.errors)
             # response.status = False
             # response.error = obj.errors
             # print(response.error)
 
-            return render(request, 'add_asset.html', {'obj': obj})
+        return render(request, 'add_asset.html', {'obj': obj})
 
 
 
