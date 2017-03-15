@@ -39,8 +39,7 @@ class AddAssetView(View):
         obj = asset.Asset()
         response = obj.add_assets(request)
         referrer = request.META['HTTP_REFERER']
-        print(referrer)
-        return render(request, 'add_asset.html', {'data': response.data})
+        return render(request, 'add_asset.html', {'data': response.data, 'referrer': referrer})
 
     def post(self, request, *args, **kwargs):
 
