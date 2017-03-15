@@ -96,11 +96,14 @@ class AddAssetForm(Form):
     def __init__(self, *args, **kwargs):
         super(AddAssetForm, self).__init__(*args, **kwargs)
 
-        values = models.IDC.objects.all().values('id', 'name', 'floor')
-        print(values)
-        result = map(lambda x: [x['id'], "%s-%s" % (x['name'], x['floor'])], values)
-        print(list(result))
-        self.fields['idc'].choices = list(result)
+        values = models.IDC.objects.all().values_list('id', 'name', 'floor')
+        idc_values = []
+        for i in values:
+            idc_values.append([i[0], "%s-%s" % (i[1], i[2])])
+        # print(values)
+        # result = map(lambda x: [x['id'], "%s-%s" % (x['name'], x['floor'])], values)
+        # print(list(result))
+        self.fields['idc'].choices = list(idc_values)
 
 
 
