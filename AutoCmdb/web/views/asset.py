@@ -117,7 +117,7 @@ class AddAssetView(View):
         print("-" * 100)
         response = BaseResponse
 
-        obj = AddAssetForm(request)
+        obj = AddAssetForm(request.POST)
 
         if obj.is_valid():
             print(request.POST)
