@@ -123,9 +123,10 @@ class AddAssetView(View):
             print(request.POST)
             return redirect('/asset.html')
         else:
-            response.status = False
-            response.error = obj.errors
-            print(response.error)
+            print(obj.errors)
+            # response.status = False
+            # response.error = obj.errors
+            # print(response.error)
 
             return render(request, 'add_asset.html', {'obj': obj})
 
