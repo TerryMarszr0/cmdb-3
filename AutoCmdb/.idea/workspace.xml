@@ -53,21 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/repository/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="115" column="39" selection-start-line="115" selection-start-column="39" selection-end-line="115" selection-end-column="39" />
+            <state relative-caret-position="300">
+              <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
               <folding>
                 <element signature="e#68#403#0" expanded="false" />
                 <element signature="e#441#739#0" expanded="false" />
-                <element signature="e#1903#1947#1" expanded="false" />
+                <element signature="e#1929#1973#1" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="asset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/service/asset.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -160,7 +160,6 @@
         <option value="$PROJECT_DIR$/web/templates/idc_list.html" />
         <option value="$PROJECT_DIR$/web/templates/layout/_layout.html" />
         <option value="$PROJECT_DIR$/web/urls.py" />
-        <option value="$PROJECT_DIR$/repository/models.py" />
         <option value="$PROJECT_DIR$/web/service/idc.py" />
         <option value="$PROJECT_DIR$/web/templates/add_asset.html" />
         <option value="$PROJECT_DIR$/web/views/asset.py" />
@@ -168,6 +167,7 @@
         <option value="$PROJECT_DIR$/web/static/js/nb-list.js" />
         <option value="$PROJECT_DIR$/web/templates/asset_list.html" />
         <option value="$PROJECT_DIR$/web/service/asset.py" />
+        <option value="$PROJECT_DIR$/repository/models.py" />
       </list>
     </option>
   </component>
@@ -1161,18 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="115" column="39" selection-start-line="115" selection-start-column="39" selection-end-line="115" selection-end-column="39" />
-          <folding>
-            <element signature="e#68#403#0" expanded="false" />
-            <element signature="e#441#739#0" expanded="false" />
-            <element signature="e#1903#1947#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/pager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1228,6 +1216,18 @@
             <element signature="e#10884#11339#0" expanded="false" />
             <marker date="1489559812000" expanded="true" signature="5456:5585" ph="select hostn... repository_server" />
             <marker date="1489559812000" expanded="true" signature="5618:5766" ph="select manag... repository_networkdevice" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="68" column="73" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
+          <folding>
+            <element signature="e#68#403#0" expanded="false" />
+            <element signature="e#441#739#0" expanded="false" />
+            <element signature="e#1929#1973#1" expanded="false" />
           </folding>
         </state>
       </provider>
