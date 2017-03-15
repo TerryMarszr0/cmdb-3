@@ -98,6 +98,7 @@ class AddAssetForm(Form):
 
         values = models.IDC.objects.only('id', 'name', 'floor')
         result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
+        print(result)
         self.fields['idc'].choices = result
 
 
