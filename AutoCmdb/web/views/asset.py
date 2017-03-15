@@ -135,9 +135,17 @@ class AddAssetView(View):
                 # 主机名已经存在
                 obj.errors['hostname'] = ["主机名已存在"]
             else:
-                tag = obj.cleaned_data.pop('tag')
+                tag_list = obj.cleaned_data.pop('tag')
 
                 obj = models.Asset.objects.create(**obj.cleaned_data)
+
+                models.Server.objects.create(hostname=hostname, asset_id=obj.id)
+
+                tag_create_list = []
+                for tag in tag_list:
+                    tag_create_list.append(models.Tag(name=tag))
+
+                obj.tag.bulk_create(tag_create_list)
 
                 return redirect('/asset.html')
 
