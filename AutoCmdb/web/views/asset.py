@@ -128,13 +128,14 @@ class AddAssetView(View):
         obj = AddAssetForm(request.POST)
 
         if obj.is_valid():
-            hostname = request.POST.get('hostname')
+            hostname = obj.cleaned_data.pop('hostname')
             Server_obj = models.Server.objects.filter(hostname=hostname)
             print(Server_obj)
             if Server_obj:  # 判断主机名是否存在
                 # 主机名已经存在
                 obj.errors['hostname'] = ["主机名已存在"]
             else:
+                tag = obj.cleaned_data.pop('tag')
                 print(obj.cleaned_data)
 
 
@@ -147,10 +148,6 @@ class AddAssetView(View):
             # print(response.error)
 
         return render(request, 'add_asset.html', {'obj': obj})
-
-
-
-
 
 
 
