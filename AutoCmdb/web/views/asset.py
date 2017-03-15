@@ -7,6 +7,7 @@ from django.http import JsonResponse
 
 from django.forms import Form
 from django.forms import widgets
+from django.forms import MultipleChoiceField
 from django.forms import fields
 
 from web.service import asset
@@ -87,11 +88,18 @@ class AddAssetForm(Form):
 
     )
 
-    tag = fields.ChoiceField(
+    tag = MultipleChoiceField(
         choices=models.Tag.objects.all().values_list('id', 'name'),
-        widget=widgets.Input(
-            attrs={"class": "form-control", "placeholder": "请输入机柜号,没有可为空", "name": "hostname", "type": "checkbox"})
+        widget=widgets.CheckboxSelectMultiple
     )
+    # tag = forms.MultipleChoiceField(
+    #     label=u'活动类型', choices=ACTIVITY_STYLE, widget=forms.CheckboxSelectMultiple())
+    #
+    #     fields.ChoiceField(
+    #     choices=models.Tag.objects.all().values_list('id', 'name'),
+    #     widget=widgets.Input(
+    #         attrs={"class": "form-control", "placeholder": "请输入机柜号,没有可为空", "name": "hostname", "type": "checkbox"})
+    # )
 
     def __init__(self, *args, **kwargs):
         super(AddAssetForm, self).__init__(*args, **kwargs)
@@ -101,6 +109,8 @@ class AddAssetForm(Form):
         for i in values:
             idc_values.append([i[0], "%s-%s" % (i[1], i[2])])
         self.fields['idc'].choices = list(idc_values)
+
+
 
 
 
