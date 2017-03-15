@@ -140,6 +140,8 @@ class AddAssetView(View):
 
                 models.Server.objects.create(hostname=hostname, asset_id=obj.id)
 
+                
+
                 if tag_list:
                     tag_create_list = []
                     for tag in tag_list:
