@@ -88,11 +88,11 @@
       <file leaf-file-name="add_asset.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/templates/add_asset.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="465">
+              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="48" selection-end-column="27" />
               <folding>
-                <element signature="e#513#547#0#HTML" expanded="true" />
-                <element signature="e#2874#2901#0#HTML" expanded="true" />
+                <element signature="e#539#573#0#HTML" expanded="true" />
+                <element signature="e#2888#2915#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1144,11 +1144,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/add_asset.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="465">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="48" selection-end-column="27" />
           <folding>
-            <element signature="e#513#547#0#HTML" expanded="true" />
-            <element signature="e#2874#2901#0#HTML" expanded="true" />
+            <element signature="e#539#573#0#HTML" expanded="true" />
+            <element signature="e#2888#2915#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
