@@ -147,6 +147,7 @@ class Asset(BaseServiceList):
     @property
     def idc_list(self):
         values = models.IDC.objects.all().values('id', 'name', 'floor')
+        print(values)
         idc_values = []
         for i in values:
             if i.floor:
