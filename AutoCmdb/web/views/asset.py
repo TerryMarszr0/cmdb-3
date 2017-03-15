@@ -104,13 +104,13 @@ class AddAssetForm(Form):
         super(AddAssetForm, self).__init__(*args, **kwargs)
 
         values = models.IDC.objects.all().values_list('id', 'name', 'floor')
-        idc_values = [['NULL', '---------']]
+        idc_values = [['', '---------']]
         for i in values:
             idc_values.append([i[0], "%s-%s" % (i[1], i[2])])
         self.fields['idc_id'].choices = idc_values
 
         values = models.BusinessUnit.objects.values_list('id', 'name')
-        business_unit_values = [['NULL', '---------']]
+        business_unit_values = [['', '---------']]
         for i in values:
             business_unit_values.append([i[0], i[1]])
         self.fields['business_unit_id'].choices = business_unit_values
@@ -123,7 +123,6 @@ class AddAssetView(View):
 
     def post(self, request, *args, **kwargs):
         print("-" * 100)
-        response = BaseResponse
 
         obj = AddAssetForm(request.POST)
 
@@ -141,11 +140,12 @@ class AddAssetView(View):
 
                 models.Server.objects.create(hostname=hostname, asset_id=obj.id)
 
-                tag_create_list = []
-                for tag in tag_list:
-                    tag_create_list.append(models.Tag(name=tag))
+                if tag_list:
+                    tag_create_list = []
+                    for tag in tag_list:
+                        tag_create_list.append(models.Tag(name=tag))
 
-                obj.tag.bulk_create(tag_create_list)
+                    obj.tag.bulk_create(tag_create_list)
 
                 return redirect('/asset.html')
 
