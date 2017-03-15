@@ -79,19 +79,23 @@ class AddAssetForm(Form):
     )
 
     idc = fields.ChoiceField(
+        required=False,
         choices=[],
         widget=widgets.Select
 
     )
 
     business_unit = fields.ChoiceField(
+        required=False,
         choices=[],
         widget=widgets.Select
 
     )
 
     tag = MultipleChoiceField(
-        required=False,
+        error_messages={
+            "required": "标签不能为空",
+        },
         choices=models.Tag.objects.all().values_list('id', 'name'),
         widget=widgets.CheckboxSelectMultiple
     )
