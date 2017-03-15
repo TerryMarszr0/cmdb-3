@@ -38,5 +38,10 @@ urlpatterns = [
     url(r'^users.html$', user.UserListView.as_view()),
     url(r'^user.html$', user.UserJsonView.as_view()),
 
+    #  标签管理
+    url(r'^tag.html$', business.TagListView.as_view()),
+    url(r'^tag-json.html$', business.TagJsonView.as_view()),
+
+    # 资产首页绘图信息
     url(r'^chart-(?P<chart_type>\w+).html$', home.ChartView.as_view()),
 ]

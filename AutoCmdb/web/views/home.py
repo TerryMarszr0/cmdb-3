@@ -34,6 +34,9 @@ class CmdbView(View):
 
 
 class ChartView(View):
+    """
+    资产首页绘图信息
+    """
     @is_login
     def dispatch(self, request, *args, **kwargs):
         result = super(ChartView, self).dispatch(request, *args, **kwargs)
