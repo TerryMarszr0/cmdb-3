@@ -6,7 +6,7 @@ from time import sleep
 
 
 class PageInfo(object):
-    def __init__(self, currentPage, totalItems, perItems=20, pageNum=11):
+    def __init__(self, currentPage, totalItems, perItems=10, pageNum=11):
         try:
             currentPage = int(currentPage)
         except Exception as e:
