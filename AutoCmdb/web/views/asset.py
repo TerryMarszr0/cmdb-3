@@ -78,14 +78,14 @@ class AddAssetForm(Form):
             attrs={"class": "form-control", "placeholder": "请输入机柜中所在位置,没有可为空", "name": "hostname", "type": "text"})
     )
 
-    idc = fields.ChoiceField(
+    idc_id = fields.ChoiceField(
         required=False,
         choices=[],
         widget=widgets.Select
 
     )
 
-    business_unit = fields.ChoiceField(
+    business_unit_id = fields.ChoiceField(
         required=False,
         choices=[],
         widget=widgets.Select
@@ -138,7 +138,7 @@ class AddAssetView(View):
                 tag = obj.cleaned_data.pop('tag')
 
                 obj = models.Asset.objects.create(**obj.cleaned_data)
-                
+
                 return redirect('/asset.html')
 
         else:
