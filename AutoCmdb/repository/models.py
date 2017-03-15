@@ -110,8 +110,8 @@ class Asset(models.Model):
     cabinet_num = models.CharField('机柜号', max_length=30, null=True, blank=True)
     cabinet_order = models.CharField('机柜中序号', max_length=30, null=True, blank=True)
 
-    idc = models.ForeignKey('IDC', verbose_name='IDC机房', null=True, blank=True)
-    business_unit = models.ForeignKey('BusinessUnit', verbose_name='属于的业务线', null=True, blank=True)
+    idc = models.ForeignKey('IDC', verbose_name='IDC机房', null=True, blank=True, default=None)
+    business_unit = models.ForeignKey('BusinessUnit', verbose_name='属于的业务线', null=True, blank=True, default=None)
 
     tag = models.ManyToManyField('Tag')
 
