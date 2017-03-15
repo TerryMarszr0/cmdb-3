@@ -104,13 +104,13 @@ class AddAssetForm(Form):
         super(AddAssetForm, self).__init__(*args, **kwargs)
 
         values = models.IDC.objects.all().values_list('id', 'name', 'floor')
-        idc_values = [['', '---------']]
+        idc_values = [['NULL', '---------']]
         for i in values:
             idc_values.append([i[0], "%s-%s" % (i[1], i[2])])
         self.fields['idc_id'].choices = idc_values
 
         values = models.BusinessUnit.objects.values_list('id', 'name')
-        business_unit_values = [['', '---------']]
+        business_unit_values = [['NULL', '---------']]
         for i in values:
             business_unit_values.append([i[0], i[1]])
         self.fields['business_unit_id'].choices = business_unit_values
