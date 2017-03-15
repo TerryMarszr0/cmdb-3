@@ -143,7 +143,7 @@ class AddAssetView(View):
                 if tag_list:
                     tag_create_list = []
                     for tag in tag_list:
-                        tag_create_list.append(models.Tag(name=tag))
+                        tag_create_list.append(models.Tag(id=tag))
 
                     obj.tag.bulk_create(tag_create_list)
 
