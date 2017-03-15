@@ -34,12 +34,10 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/views/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+            <state relative-caret-position="394">
+              <caret line="152" column="72" selection-start-line="152" selection-start-column="72" selection-end-line="152" selection-end-column="72" />
               <folding>
                 <element signature="e#45#74#0" expanded="true" />
-                <marker date="1489565365000" expanded="true" signature="4376:4772" ph="..." />
-                <marker date="1489565365000" expanded="true" signature="4403:4565" ph="..." />
               </folding>
             </state>
           </provider>
@@ -1671,12 +1669,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        <state relative-caret-position="394">
+          <caret line="152" column="72" selection-start-line="152" selection-start-column="72" selection-end-line="152" selection-end-column="72" />
           <folding>
             <element signature="e#45#74#0" expanded="true" />
-            <marker date="1489565365000" expanded="true" signature="4376:4772" ph="..." />
-            <marker date="1489565365000" expanded="true" signature="4403:4565" ph="..." />
           </folding>
         </state>
       </provider>

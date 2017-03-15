@@ -150,7 +150,7 @@ class AddAssetView(View):
                     #     # obj.save()
                     #     # Asset_obj.tag.id = tag
 
-                    obj.tag.add(models.Tag.objects.filter(id__in=tag_list))
+                    obj.tag.add(models.Tag.objects.get(id__in=tag_list))
 
                         # tag_create_list.append(models.Tag(id=tag))
 
