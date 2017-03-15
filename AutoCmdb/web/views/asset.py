@@ -75,7 +75,7 @@ class AddAssetForm(Form):
     cabinet_order = fields.CharField(
         required=False,
         widget=widgets.Input(
-            attrs={"class": "form-control", "placeholder": "请输入机柜所在位置,没有可为空", "name": "hostname", "type": "text"})
+            attrs={"class": "form-control", "placeholder": "请输入机柜中所在位置,没有可为空", "name": "hostname", "type": "text"})
     )
 
     idc = fields.ChoiceField(
