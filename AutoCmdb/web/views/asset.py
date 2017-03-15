@@ -39,7 +39,9 @@ class AddAssetView(View):
         obj = asset.Asset()
         response = obj.add_assets(request)
         print(dir(request))
-        
+        print(request.get_full_path)
+        print(request.path)
+        print(request.path_info)
         return render(request, 'add_asset.html', {'data': response.data})
 
     def post(self, request, *args, **kwargs):
