@@ -127,7 +127,7 @@ class AddAssetView(View):
             print(Server_obj)
             if Server_obj:  # 判断主机名是否存在
                 # 主机名已经存在
-                obj.errors['hostname'] = "主机名已存在"
+                obj.errors['hostname'] = ["主机名已存在"]
             else:
                 return redirect('/asset.html')
 
