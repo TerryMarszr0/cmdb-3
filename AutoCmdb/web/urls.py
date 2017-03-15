@@ -7,6 +7,7 @@ from web.views import asset
 from web.views import business
 from web.views import user
 from web.views import idc
+from web.views import tag
 
 
 urlpatterns = [
@@ -39,8 +40,8 @@ urlpatterns = [
     url(r'^user.html$', user.UserJsonView.as_view()),
 
     #  标签管理
-    url(r'^tag.html$', business.TagListView.as_view()),
-    url(r'^tag-json.html$', business.TagJsonView.as_view()),
+    url(r'^tag.html$', tag.TagListView.as_view()),
+    url(r'^tag-json.html$', tag.TagJsonView.as_view()),
 
     # 资产首页绘图信息
     url(r'^chart-(?P<chart_type>\w+).html$', home.ChartView.as_view()),
