@@ -82,7 +82,7 @@ class AddAssetForm(Form):
     )
 
     business_unit = fields.ChoiceField(
-        choices=models.BusinessUnit.objects.values('id', 'name'),
+        choices=models.BusinessUnit.objects.values_list('id', 'name'),
         widget=widgets.Select
 
     )
