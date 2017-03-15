@@ -38,6 +38,7 @@ class AddAssetView(View):
     def get(self, request, *args, **kwargs):
         obj = asset.Asset()
         response = obj.add_assets(request)
+        print(dir(request))
         return render(request, 'add_asset.html', {'data': response.data})
 
     def post(self, request, *args, **kwargs):
