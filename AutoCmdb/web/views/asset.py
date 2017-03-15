@@ -128,7 +128,6 @@ class AddAssetView(View):
         obj = AddAssetForm(request.POST)
 
         if obj.is_valid():
-            print(request.POST)
             hostname = request.POST.get('hostname')
             Server_obj = models.Server.objects.filter(hostname=hostname)
             print(Server_obj)
@@ -136,6 +135,9 @@ class AddAssetView(View):
                 # 主机名已经存在
                 obj.errors['hostname'] = ["主机名已存在"]
             else:
+                print(obj.cleaned_data)
+
+
                 return redirect('/asset.html')
 
         else:
