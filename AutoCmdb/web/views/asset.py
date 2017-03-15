@@ -10,6 +10,8 @@ from django.forms import widgets
 from django.forms import MultipleChoiceField
 from django.forms import fields
 
+from utils.response import BaseResponse
+
 from web.service import asset
 
 from repository import models
@@ -41,7 +43,7 @@ class AssetDetailView(View):
 
 
 class AddAssetForm(Form):
-    """桌台管理Form表单"""
+    """新增资产Form表单"""
 
     device_type_id = fields.ChoiceField(
         choices=models.Asset.device_type_choices,
@@ -92,14 +94,6 @@ class AddAssetForm(Form):
         choices=models.Tag.objects.all().values_list('id', 'name'),
         widget=widgets.CheckboxSelectMultiple
     )
-    # tag = forms.MultipleChoiceField(
-    #     label=u'活动类型', choices=ACTIVITY_STYLE, widget=forms.CheckboxSelectMultiple())
-    #
-    #     fields.ChoiceField(
-    #     choices=models.Tag.objects.all().values_list('id', 'name'),
-    #     widget=widgets.Input(
-    #         attrs={"class": "form-control", "placeholder": "请输入机柜号,没有可为空", "name": "hostname", "type": "checkbox"})
-    # )
 
     def __init__(self, *args, **kwargs):
         super(AddAssetForm, self).__init__(*args, **kwargs)
@@ -120,9 +114,21 @@ class AddAssetView(View):
         return render(request, 'add_asset.html', {'obj': obj})
 
     def post(self, request, *args, **kwargs):
+        response = BaseResponse
 
-        print(request.POST)
-        return redirect('/asset.html')
+        obj = AddAssetForm(request)
+
+        if obj.is_valid():
+            print(request.POST)
+            return redirect('/asset.html')
+        else:
+            response.status = False
+            response.error = obj.errors
+            print(response.error)
+
+            return render(request, 'add_asset.html', {'obj': obj})
+
+
 
 
 
