@@ -154,6 +154,7 @@ class Asset(BaseServiceList):
                 idc_values.append({'id': i.id, 'name': "%s-%s层" % (i.name, i.floor)})
             else:
                 idc_values.append({'id': i.id, 'name': i.name})
+        print(idc_values)
         #
         # values = models.IDC.objects.only('id', 'name', 'floor')
         # result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
