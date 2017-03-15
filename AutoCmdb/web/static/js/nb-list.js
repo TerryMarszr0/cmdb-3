@@ -882,6 +882,10 @@
             bindMenuFunction();
             bindMultiSelect();
             bindSearchCondition();
+        },
+
+        'ChangePage': function (pager) {
+            initialize(pager);
         }
 
     });
