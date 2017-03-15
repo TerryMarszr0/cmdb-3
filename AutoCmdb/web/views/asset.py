@@ -122,7 +122,7 @@ class AddAssetView(View):
 
         if obj.is_valid():
             print(request.POST)
-            hostname = request.POST
+            hostname = request.POST.get('hostname')
             Server_obj = models.Server.objects.filter(hostname=hostname)
             print(Server_obj)
             if Server_obj:  # 判断主机名是否存在
