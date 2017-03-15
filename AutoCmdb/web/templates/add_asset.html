@@ -21,75 +21,84 @@
             <div class="form-group">
                 <label for="id_device_type_id" class="col-sm-2 control-label">资产类型: </label>
                 <div class="col-sm-2">
-                    <select id="id_device_type_id" name="device_type_id">
-                        {% for i in data.device_type_list %}
-                            <option value="{{ i.id }}">{{ i.name }}</option>
-                        {% endfor %}
-                    </select>
+                    {% obj.device_type_id %}
+{#                    <select id="id_device_type_id" name="device_type_id">#}
+{#                        {% for i in data.device_type_list %}#}
+{#                            <option value="{{ i.id }}">{{ i.name }}</option>#}
+{#                        {% endfor %}#}
+{#                    </select>#}
                 </div>
             </div>
             <div class="form-group">
                 <label for="id_device_status_id" class="col-sm-2 control-label">资产状态: </label>
                 <div class="col-sm-2">
-                    <select id="id_device_status_id" name="device_status_id">
-                        {% for i in data.device_status_list %}
-                            <option value="{{ i.id }}">{{ i.name }}</option>
-                        {% endfor %}
-                    </select>
+                    {% obj.device_status_id %}
+
+{#                    <select id="id_device_status_id" name="device_status_id">#}
+{#                        {% for i in data.device_status_list %}#}
+{#                            <option value="{{ i.id }}">{{ i.name }}</option>#}
+{#                        {% endfor %}#}
+{#                    </select>#}
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="id_hostname" class="col-sm-2 control-label">主机名: </label>
                 <div class="col-sm-3">
-                    <input type="text" class="form-control" id="id_hostname" name="hostname">
+                    {% obj.hostname %}
+{#                    <input type="text" class="form-control" id="id_hostname" name="hostname">#}
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="id_cabinet_num" class="col-sm-2 control-label">机柜号: </label>
                 <div class="col-sm-3">
-                    <input type="text" class="form-control" id="id_cabinet_num" name="cabinet_num">
+                    {% obj.cabinet_num %}
+{#                    <input type="text" class="form-control" id="id_cabinet_num" name="cabinet_num">#}
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="id_cabinet_order" class="col-sm-2 control-label">机柜中序号: </label>
                 <div class="col-sm-3">
-                    <input type="text" class="form-control" id="id_cabinet_order" name="cabinet_order">
+                    {% obj.cabinet_order %}
+{#                    <input type="text" class="form-control" id="id_cabinet_order" name="cabinet_order">#}
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="id_idc" class="col-sm-2 control-label">IDC机房: </label>
                 <div class="col-sm-2">
-                    <select id="id_idc" name="idc">
-                        {% for i in data.idc_list %}
-                            <option value="{{ i.id }}">{{ i.name }}</option>
-                        {% endfor %}
-                    </select>
+                    {% obj.idc %}
+{#                    <select id="id_idc" name="idc">#}
+{#                        {% for i in data.idc_list %}#}
+{#                            <option value="{{ i.id }}">{{ i.name }}</option>#}
+{#                        {% endfor %}#}
+{#                    </select>#}
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="id_business_unit" class="col-sm-2 control-label">业务线: </label>
                 <div class="col-sm-2">
-                    <select id="id_business_unit" name="business_unit">
-                        {% for i in data.business_unit_list %}
-                            <option value="{{ i.id }}">{{ i.name }}</option>
-                        {% endfor %}
-                    </select>
+                    {% obj.business_unit %}
+{#                    <select id="id_business_unit" name="business_unit">#}
+{#                        {% for i in data.business_unit_list %}#}
+{#                            <option value="{{ i.id }}">{{ i.name }}</option>#}
+{#                        {% endfor %}#}
+{#                    </select>#}
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="id_tag" class="col-sm-2 control-label">业务线: </label>
+                <label for="id_tag" class="col-sm-2 control-label">标签: </label>
                 <div class="col-sm-4" style="margin-top: 5px;">
-                    {% for i in data.tag_name_list %}
-                        <div>
-                            <input type="checkbox" value="{{ i.id }}" name="tag"> {{ i.name }}
-                        </div>
-                    {% endfor %}
+                    {% obj.tag %}
+{#                    {% for i in data.tag_name_list %}#}
+{#                        <div>#}
+{#                            <input type="checkbox" value="{{ i.id }}" name="tag"> {{ i.name }}#}
+{#                        </div>#}
+{#                    {% endfor %}#}
                 </div>
             </div>
             <div class="form-group" style="margin-left: 130px;margin-top: 20px;">
