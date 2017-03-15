@@ -88,7 +88,7 @@ class AddAssetForm(Form):
     )
 
     tag = fields.CharField(
-        required=False,
+        choices=models.Tag.objects.all().values_list('id', 'name'),
         widget=widgets.Input(
             attrs={"class": "form-control", "placeholder": "请输入机柜号,没有可为空", "name": "hostname", "type": "checkbox"})
     )
@@ -100,9 +100,6 @@ class AddAssetForm(Form):
         idc_values = []
         for i in values:
             idc_values.append([i[0], "%s-%s" % (i[1], i[2])])
-        # print(values)
-        # result = map(lambda x: [x['id'], "%s-%s" % (x['name'], x['floor'])], values)
-        # print(list(result))
         self.fields['idc'].choices = list(idc_values)
 
 
