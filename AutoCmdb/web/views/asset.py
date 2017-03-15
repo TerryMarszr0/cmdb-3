@@ -96,8 +96,8 @@ class AddAssetForm(Form):
     def __init__(self, *args, **kwargs):
         super(AddAssetForm, self).__init__(*args, **kwargs)
 
-        values = models.IDC.objects.only('id', 'name', 'floor')
-        result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
+        values = models.IDC.objects.all().values('id', 'name', 'floor')
+        result = map(lambda x: [x.id, "%s-%s" % (x.name, x.floor)], values)
         print(list(result))
         self.fields['idc'].choices = list(result)
 
