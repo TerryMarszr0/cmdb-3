@@ -87,7 +87,7 @@ class AddAssetForm(Form):
 
     )
 
-    tag = fields.CharField(
+    tag = fields.ChoiceField(
         choices=models.Tag.objects.all().values_list('id', 'name'),
         widget=widgets.Input(
             attrs={"class": "form-control", "placeholder": "请输入机柜号,没有可为空", "name": "hostname", "type": "checkbox"})
