@@ -46,21 +46,11 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/views/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+            <state relative-caret-position="180">
+              <caret line="50" column="68" selection-start-line="50" selection-start-column="68" selection-end-line="50" selection-end-column="68" />
               <folding>
                 <element signature="e#586#989#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="asset_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/templates/asset_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -99,8 +89,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repository/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+            <state relative-caret-position="240">
+              <caret line="132" column="9" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="9" />
               <folding>
                 <element signature="e#68#403#0" expanded="false" />
                 <element signature="e#441#739#0" expanded="false" />
@@ -176,8 +166,8 @@
         <option value="$PROJECT_DIR$/web/urls.py" />
         <option value="$PROJECT_DIR$/web/templates/edit_asset.html" />
         <option value="$PROJECT_DIR$/web/service/asset.py" />
-        <option value="$PROJECT_DIR$/web/views/asset.py" />
         <option value="$PROJECT_DIR$/web/templates/asset_edit.html" />
+        <option value="$PROJECT_DIR$/web/views/asset.py" />
       </list>
     </option>
   </component>
@@ -1133,17 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
-          <folding>
-            <element signature="e#68#403#0" expanded="false" />
-            <element signature="e#441#739#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/response.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1160,10 +1139,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/repository/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="132" column="9" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="9" />
+          <folding>
+            <element signature="e#68#403#0" expanded="false" />
+            <element signature="e#441#739#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        <state relative-caret-position="180">
+          <caret line="50" column="68" selection-start-line="50" selection-start-column="68" selection-end-line="50" selection-end-column="68" />
           <folding>
             <element signature="e#586#989#0" expanded="false" />
           </folding>

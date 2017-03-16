@@ -47,8 +47,8 @@ class AssetEditlView(View):
         response = asset.Asset.assets_detail(device_type_id, asset_nid)     # 获取的数据和资产详情是一样的
 
         obj = AddAssetForm()
-        obj.fields['device_type_id'].initial = response.data.assets.device_type_id
-        obj.fields['device_status_id'].initial = response.data.assets.device_status_id
+        obj.fields['device_type_id'].initial = response.data.asset.device_type_id
+        obj.fields['device_status_id'].initial = response.data.asset.device_status_id
         obj.fields['hostname'].initial = response.data.hostname
         obj.fields['cabinet_num'].initial = response.data.cabinet_num
         obj.fields['cabinet_order'].initial = response.data.cabinet_order
