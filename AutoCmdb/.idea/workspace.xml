@@ -47,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/web/views/asset.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="301">
-              <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+              <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
               <folding>
                 <element signature="e#45#74#0" expanded="true" />
               </folding>
@@ -58,8 +58,8 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/service/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="360" column="52" selection-start-line="360" selection-start-column="52" selection-end-line="360" selection-end-column="52" />
+            <state relative-caret-position="225">
+              <caret line="340" column="48" selection-start-line="340" selection-start-column="34" selection-end-line="340" selection-end-column="48" />
               <folding>
                 <element signature="e#45#56#0" expanded="true" />
                 <element signature="e#362#5890#0" expanded="false" />
@@ -161,8 +161,8 @@
         <option value="$PROJECT_DIR$/web/templates/edit_asset.html" />
         <option value="$PROJECT_DIR$/web/templates/asset_edit.html" />
         <option value="$PROJECT_DIR$/web/service/forms.py" />
-        <option value="$PROJECT_DIR$/web/views/asset.py" />
         <option value="$PROJECT_DIR$/web/service/asset.py" />
+        <option value="$PROJECT_DIR$/web/views/asset.py" />
       </list>
     </option>
   </component>
@@ -1087,16 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/asset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-          <folding>
-            <element signature="e#45#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repository/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -1108,10 +1098,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/asset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+          <folding>
+            <element signature="e#45#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/service/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="360" column="52" selection-start-line="360" selection-start-column="52" selection-end-line="360" selection-end-column="52" />
+        <state relative-caret-position="225">
+          <caret line="340" column="48" selection-start-line="340" selection-start-column="34" selection-end-line="340" selection-end-column="48" />
           <folding>
             <element signature="e#45#56#0" expanded="true" />
             <element signature="e#362#5890#0" expanded="false" />

@@ -44,7 +44,7 @@ class AssetEditlView(View):
         return render(request, 'asset_edit.html', {'obj': obj})
 
     def post(self, request, device_type_id, asset_nid):
-        ret = asset.Asset.assets_edit_post(request, asset_nid)
+        ret = asset.Asset.assets_edit_post(request, device_type_id,  asset_nid)
         return HttpResponse('ok')
 
 
