@@ -53,10 +53,20 @@ class AssetEditlView(View):
         obj.fields['hostname'].initial = response.data.hostname
         obj.fields['cabinet_num'].initial = response.data.asset.cabinet_num
         obj.fields['cabinet_order'].initial = response.data.asset.cabinet_order
-        obj.fields['idc_id'].initial = response.data.asset.idc.id
-        obj.fields['business_unit_id'].initial = response.data.asset.business_unit.id
-        obj.fields['tag'].initial = response.data.asset.tag.name
-        print(response.data.asset.tag.all())
+        if response.data.asset.idc:
+            obj.fields['idc_id'].initial = response.data.asset.idc.id
+        else:
+            obj.fields['idc_id'].initial = ""
+
+        if response.data.asset.business_unit:
+            obj.fields['business_unit_id'].initial = response.data.asset.business_unit.id
+        else:
+            obj.fields['business_unit_id'].initial = ""
+
+        if response.data.asset.tag:
+            obj.fields['tag'].initial = response.data.asset.tag.name
+        else:
+            obj.fields['tag'].initial = ""
         return render(request, 'asset_edit.html', {'obj': obj})
 
 
