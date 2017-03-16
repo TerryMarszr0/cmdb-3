@@ -307,22 +307,22 @@ class Asset(BaseServiceList):
             response.message = str(e)
         return response
 
-    def assets_edit(self, device_type_id, asset_id):
-        ret = {}
-        response = self.assets_detail(device_type_id, asset_id)
-
-        ret['assets_detail'] = response.data
-        ret['global_dict'] = {
-            'device_status_list': self.device_status_list,
-            'device_type_list': self.device_type_list,
-            'idc_list': self.idc_list,
-            'business_unit_list': self.business_unit_list,
-            'tag_name_list': self.tag_name_list,  # 用作搜索条件处显示标签名称搜索条件
-        }
-
-        response.data = ret
-
-        return response
+    # def assets_edit(self, device_type_id, asset_id):
+    #     ret = {}
+    #     response = self.assets_detail(device_type_id, asset_id)
+    #
+    #     ret['assets_detail'] = response.data
+    #     ret['global_dict'] = {
+    #         'device_status_list': self.device_status_list,
+    #         'device_type_list': self.device_type_list,
+    #         'idc_list': self.idc_list,
+    #         'business_unit_list': self.business_unit_list,
+    #         'tag_name_list': self.tag_name_list,  # 用作搜索条件处显示标签名称搜索条件
+    #     }
+    #
+    #     response.data = ret
+    #
+    #     return response
 
 
 
