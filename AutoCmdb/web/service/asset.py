@@ -356,7 +356,7 @@ class Asset(BaseServiceList):
 
                 Server_obj = models.Server.objects.filter(asset_id=asset_nid)
                 Server_obj.update(**data)
-
+                print("tag: --> ", tag)
                 if tag:
                     print(dir(Server_obj.first().tag))
 
