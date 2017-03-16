@@ -360,8 +360,8 @@ class Asset(BaseServiceList):
             if tag_list:
                 tag_obj = models.Tag.objects.filter(id__in=tag_list)
                 tmp = []
-                old_tag_list = [lambda x: tmp.append(x[0]), Asset_obj.first().tag.all().values_list('id')]
-                print("old_tag_list --> ", old_tag_list)
+                lambda x: tmp.append(x[0]), Asset_obj.first().tag.all().values_list('id')
+                print("old_tag_list --> ", tmp)
                 # Asset_obj.first().tag.remove()
                 # Asset_obj.first().tag.add(*tag_obj)
 
