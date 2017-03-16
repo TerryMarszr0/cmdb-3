@@ -16,7 +16,7 @@ class Tag(BaseServiceList):
     def __init__(self):
         # 查询条件的配置
         condition_config = [
-            {'name': 'id', 'text': '业务线', 'condition_type': 'select', 'global_name': "name_list"},
+            {'name': 'id', 'text': '标签', 'condition_type': 'select', 'global_name': "name_list"},
         ]
 
         # 表格的配置
