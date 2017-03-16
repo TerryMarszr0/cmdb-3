@@ -358,11 +358,14 @@ class Asset(BaseServiceList):
 
             tag_list = request.POST.get('tag')
             if tag_list:
-                tag_obj = models.Tag.objects.filter(id__in=tag_list)
                 tmp = []
                 for i in Asset_obj.first().tag.all().values_list('id'):
                     tmp.append(i[0])
                 Asset_obj.first().tag.remove(*tmp)
+
+                print("tag_list: ", tag_list)
+                tag_obj = models.Tag.objects.filter(id__in=tag_list)
+                print("tag_obj: ", tag_obj)
                 Asset_obj.first().tag.add(*tag_obj)
 
 
