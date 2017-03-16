@@ -357,6 +357,7 @@ class Asset(BaseServiceList):
             Asset_obj.update(**data)
 
             print(request.POST)
+            print(request.POST.get('tag'))
 
             tag_list = request.POST.get('tag')
             if tag_list:
