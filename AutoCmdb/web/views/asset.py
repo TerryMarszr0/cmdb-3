@@ -3,6 +3,7 @@
 from django.views import View
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.shortcuts import HttpResponse
 from django.http import JsonResponse
 
 from django.forms import Form
@@ -74,6 +75,11 @@ class AssetEditlView(View):
 
 
         return render(request, 'asset_edit.html', {'obj': obj})
+
+    def put(self, request):
+        print(dir(request))
+
+        return HttpResponse('ok')
 
 
 class AddAssetForm(Form):
