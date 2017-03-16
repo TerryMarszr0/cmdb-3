@@ -55,7 +55,7 @@ class AssetEditlView(View):
         obj.fields['idc_id'].initial = response.data.asset.idc.id
         obj.fields['business_unit_id'].initial = response.data.asset.business_unit.id
         obj.fields['tag'].initial = response.data.asset.tag.name
-        print(response.data.asset.tag.name)
+        print(response.data.asset.tag.all())
         return render(request, 'asset_edit.html', {'obj': obj})
 
 
