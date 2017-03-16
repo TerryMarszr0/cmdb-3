@@ -64,12 +64,15 @@ class AssetEditlView(View):
             obj.fields['business_unit_id'].initial = ""
 
         if response.data.asset.tag:
-            obj.fields['tag'].initial = response.data.asset.tag.name
+            tag_list = []
+            for tag in response.data.asset.tag.all().values_list('name'):
+                tag_list.append(tag[0])
+            print(tag_list)
+            obj.fields['tag'].initial = tag_list
         else:
             obj.fields['tag'].initial = ""
 
-        tag_list = map([lambda x: x, response.data.asset.tag.all().values_list('name')])
-        print(tag_list)
+
         return render(request, 'asset_edit.html', {'obj': obj})
 
 
