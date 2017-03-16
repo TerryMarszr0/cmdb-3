@@ -131,6 +131,13 @@ class Server(models.Model):
     """
     asset = models.OneToOneField('Asset')
 
+    server_type_choices = (
+        (1, '硬件'),
+        (2, '虚拟机'),
+    )
+
+    server_type = models.IntegerField(verbose_name="服务器类型", choices=server_type_choices, default=1)
+
     hostname = models.CharField(max_length=128, unique=True)
     sn = models.CharField('SN号', max_length=64, db_index=True, null=True, blank=True)
     manufacturer = models.CharField(verbose_name='制造商', max_length=64, null=True, blank=True)
