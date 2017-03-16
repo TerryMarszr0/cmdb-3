@@ -67,6 +67,8 @@ class AssetEditlView(View):
             obj.fields['tag'].initial = response.data.asset.tag.name
         else:
             obj.fields['tag'].initial = ""
+
+        print(response.data.asset.tag)
         return render(request, 'asset_edit.html', {'obj': obj})
 
 
