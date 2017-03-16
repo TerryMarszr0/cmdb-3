@@ -93,9 +93,10 @@ class Asset(models.Model):
     资产信息表，所有资产公共信息（交换机，服务器，防火墙等）
     """
     device_type_choices = (
-        (1, '服务器'),
-        (2, '交换机'),
-        (3, '防火墙'),
+        (1, '服务器-硬件'),
+        (2, '服务器-虚拟机'),
+        (3, '交换机'),
+        (4, '防火墙'),
     )
     device_status_choices = (
         (1, '上架'),
@@ -130,12 +131,6 @@ class Server(models.Model):
     服务器信息
     """
     asset = models.OneToOneField('Asset')
-
-    server_type_choices = (
-        (1, '硬件'),
-        (2, '虚拟机'),
-    )
-    server_type_id = models.IntegerField(verbose_name="服务器类型", choices=server_type_choices, default=1)
 
     hostname = models.CharField(max_length=128, unique=True)
     sn = models.CharField('SN号', max_length=64, db_index=True, null=True, blank=True)
