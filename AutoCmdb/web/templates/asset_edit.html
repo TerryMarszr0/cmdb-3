@@ -33,10 +33,9 @@
                 <label for="id_device_type_id" class="col-sm-2 control-label">资产类型: </label>
                 <div class="col-sm-2">
                     <select id="id_device_type_id" name="device_type_id" required="">
-                        <option value="1">服务器-硬件</option>
-                        <option value="2">服务器-虚拟机</option>
-                        <option value="3">交换机</option>
-                        <option value="4">防火墙</option>
+                        {% for obj in response.data.global_dict.device_type_list %}
+                            <option value="{{ obj.id }}">{{ obj.name }}</option>
+                        {% endfor %}
                     </select>
                 </div>
             </div>

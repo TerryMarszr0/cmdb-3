@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="asset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/asset.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+              <caret line="50" column="27" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="27" />
               <folding>
                 <element signature="e#586#989#0" expanded="false" />
                 <element signature="e#1591#3640#0" expanded="false" />
@@ -56,15 +56,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asset_edit.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="asset_edit.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/templates/asset_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="34" column="71" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="71" />
+            <state relative-caret-position="315">
+              <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
               <folding>
                 <element signature="e#599#633#0#HTML" expanded="true" />
-                <element signature="e#4352#4376#0#HTML" expanded="true" />
-                <element signature="e#5400#5427#0#HTML" expanded="true" />
+                <element signature="e#4327#4351#0#HTML" expanded="true" />
+                <element signature="e#5375#5402#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,7 +73,7 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/service/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="135">
               <caret line="295" column="8" selection-start-line="295" selection-start-column="8" selection-end-line="295" selection-end-column="8" />
               <folding>
                 <element signature="e#332#5860#0" expanded="false" />
@@ -170,9 +170,9 @@
         <option value="$PROJECT_DIR$/web/service/idc.py" />
         <option value="$PROJECT_DIR$/web/urls.py" />
         <option value="$PROJECT_DIR$/web/templates/edit_asset.html" />
-        <option value="$PROJECT_DIR$/web/templates/asset_edit.html" />
         <option value="$PROJECT_DIR$/web/service/asset.py" />
         <option value="$PROJECT_DIR$/web/views/asset.py" />
+        <option value="$PROJECT_DIR$/web/templates/asset_edit.html" />
       </list>
     </option>
   </component>
@@ -1125,21 +1125,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/templates/asset_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="34" column="71" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="71" />
-          <folding>
-            <element signature="e#599#633#0#HTML" expanded="true" />
-            <element signature="e#4352#4376#0#HTML" expanded="true" />
-            <element signature="e#5400#5427#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/service/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="135">
           <caret line="295" column="8" selection-start-line="295" selection-start-column="8" selection-end-line="295" selection-end-column="8" />
           <folding>
             <element signature="e#332#5860#0" expanded="false" />
@@ -1159,10 +1147,22 @@
     <entry file="file://$PROJECT_DIR$/web/views/asset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <caret line="50" column="27" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="27" />
           <folding>
             <element signature="e#586#989#0" expanded="false" />
             <element signature="e#1591#3640#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/asset_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+          <folding>
+            <element signature="e#599#633#0#HTML" expanded="true" />
+            <element signature="e#4327#4351#0#HTML" expanded="true" />
+            <element signature="e#5375#5402#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
