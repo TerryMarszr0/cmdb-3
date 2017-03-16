@@ -351,14 +351,16 @@ class Asset(BaseServiceList):
                 "cabinet_num": request.POST.get('cabinet_num'),
             }
             hostname = request.POST.get('hostname')
-            tag = request.POST.get('tag')
-
-            print("idr --> ", dir(models.Asset.objects.filter(id=asset_nid).first().tag))
-            print(models.Asset.objects.filter(id=asset_nid).first().tag.all())
 
             models.Server.objects.filter(asset_id=asset_nid).update(hostname=hostname)
-            models.Asset.objects.filter(id=asset_nid).update(**data)
+            Asset_obj = models.Asset.objects.filter(id=asset_nid)
+            Asset_obj.update(**data)
 
+            tag_list = request.POST.get('tag')
+            if tag_list:
+                tag_obj = models.Tag.objects.filter(id__in=tag_list)
+                Asset_obj.tag.delete()
+                Asset_obj.tag.add(*tag_obj)
 
 
         # except Exception as e:
