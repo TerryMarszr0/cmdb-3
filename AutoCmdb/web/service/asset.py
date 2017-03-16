@@ -8,6 +8,7 @@ from utils.response import BaseResponse
 from django.http.request import QueryDict
 
 from .base import BaseServiceList
+from web.service import forms
 
 
 class Asset(BaseServiceList):
@@ -149,14 +150,12 @@ class Asset(BaseServiceList):
     @property
     def idc_list(self):
         values = models.IDC.objects.all().values('id', 'name', 'floor')
-        print(values)
         idc_values = []
         for i in values:
             if i['floor']:
                 idc_values.append({'id': i['id'], 'name': "%s-%s层" % (i['name'], i['floor'])})
             else:
                 idc_values.append({'id': i['id'], 'name': i['name']})
-        print(idc_values)
         #
         # values = models.IDC.objects.only('id', 'name', 'floor')
         # result = map(lambda x: {'id': x.id, 'name': "%s-%s" % (x.name, x.floor)}, values)
@@ -203,7 +202,6 @@ class Asset(BaseServiceList):
     def assets_condition(request):
         """根据搜索条件构造 q 对象"""
         con_str = request.GET.get('condition', None)
-        print(con_str)
         if not con_str:
             con_dict = {}
         else:
@@ -307,28 +305,66 @@ class Asset(BaseServiceList):
             response.message = str(e)
         return response
 
-    # def assets_edit(self, device_type_id, asset_id):
-    #     ret = {}
-    #     response = self.assets_detail(device_type_id, asset_id)
-    #
-    #     ret['assets_detail'] = response.data
-    #     ret['global_dict'] = {
-    #         'device_status_list': self.device_status_list,
-    #         'device_type_list': self.device_type_list,
-    #         'idc_list': self.idc_list,
-    #         'business_unit_list': self.business_unit_list,
-    #         'tag_name_list': self.tag_name_list,  # 用作搜索条件处显示标签名称搜索条件
-    #     }
-    #
-    #     response.data = ret
-    #
-    #     return response
+    @staticmethod
+    def assets_edit_get(device_type_id, asset_nid):
 
+        response = Asset.assets_detail(device_type_id, asset_nid)  # 获取的数据和资产详情是一样的
 
+        obj = forms.AddAssetForm()
+        obj.fields['device_type_id'].initial = response.data.asset.device_type_id
+        obj.fields['device_status_id'].initial = response.data.asset.device_status_id
+        obj.fields['hostname'].initial = response.data.hostname
+        obj.fields['cabinet_num'].initial = response.data.asset.cabinet_num
+        obj.fields['cabinet_order'].initial = response.data.asset.cabinet_order
+        if response.data.asset.idc:
+            obj.fields['idc_id'].initial = response.data.asset.idc.id
+        else:
+            obj.fields['idc_id'].initial = ""
 
+        if response.data.asset.business_unit:
+            obj.fields['business_unit_id'].initial = response.data.asset.business_unit.id
+        else:
+            obj.fields['business_unit_id'].initial = ""
 
+        if response.data.asset.tag:
+            tag_list = []
+            for tag in response.data.asset.tag.all().values_list('id'):
+                tag_list.append(tag[0])
+            obj.fields['tag'].initial = tag_list
+        else:
+            obj.fields['tag'].initial = ""
 
+        return obj
 
+    @staticmethod
+    def assets_add(request):
+        response = BaseResponse()
+        obj = forms.AddAssetForm(request.POST)
+
+        if obj.is_valid():
+            hostname = obj.cleaned_data.pop('hostname')
+            Server_obj = models.Server.objects.filter(hostname=hostname)
+
+            if Server_obj:  # 判断主机名是否存在
+                # 主机名已经存在
+                obj.errors['hostname'] = ["主机名已存在"]
+            else:
+                tag_list = obj.cleaned_data.pop('tag')
+
+                Asset_obj = models.Asset.objects.create(**obj.cleaned_data)
+
+                models.Server.objects.create(hostname=hostname, asset_id=obj.id)
+
+                if tag_list:
+                    tag_obj = models.Tag.objects.filter(id__in=tag_list)
+                    Asset_obj.tag.add(*tag_obj)
+
+                response.status = True
+        else:
+            response.status = False
+
+        response.data = obj
+        return response
 
 
 
