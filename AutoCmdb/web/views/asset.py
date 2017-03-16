@@ -45,7 +45,7 @@ class AssetEditlView(View):
 
     def post(self, request, device_type_id, asset_nid):
         ret = asset.Asset.assets_edit_post(request, device_type_id,  asset_nid)
-        return HttpResponse('ok')
+        return redirect('/asset.html')
 
 
 class AddAssetView(View):
