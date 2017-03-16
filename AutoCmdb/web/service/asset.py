@@ -359,7 +359,7 @@ class Asset(BaseServiceList):
             tag_list = request.POST.get('tag')
             if tag_list:
                 tag_obj = models.Tag.objects.filter(id__in=tag_list)
-                Asset_obj.first().tag.delete()
+                Asset_obj.first().tag.remove(Asset_obj.first().tag.all().values_list('id'))
                 Asset_obj.first().tag.add(*tag_obj)
 
 
