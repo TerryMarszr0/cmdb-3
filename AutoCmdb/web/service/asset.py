@@ -344,12 +344,12 @@ class Asset(BaseServiceList):
         if device_type_id in ['1', '2']:  # 硬件服务器 或虚拟机
             data = {
                 "hostname": request.POST.get('hostname'),
-                "asset_device_type_id": request.POST.get('device_type_id'),
-                "asset_device_status_id": request.POST.get('device_status_id'),
-                "asset_cabinet_order": request.POST.get('cabinet_order'),
-                "asset_business_unit_id": request.POST.get('business_unit_id'),
-                "asset_idc_id": request.POST.get('idc_id'),
-                "asset_cabinet_num": request.POST.get('cabinet_num'),
+                "asset__device_type_id": request.POST.get('device_type_id'),
+                "asset__device_status_id": request.POST.get('device_status_id'),
+                "asset__cabinet_order": request.POST.get('cabinet_order'),
+                "asset__business_unit_id": request.POST.get('business_unit_id'),
+                "asset__idc_id": request.POST.get('idc_id'),
+                "asset__cabinet_num": request.POST.get('cabinet_num'),
             }
 
             tag = request.POST.get('tag')
