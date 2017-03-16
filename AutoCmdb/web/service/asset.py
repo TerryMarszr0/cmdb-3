@@ -297,7 +297,7 @@ class Asset(BaseServiceList):
 
         response = BaseResponse()
         try:
-            if device_type_id == '1':
+            if device_type_id in ['1', '2']:    # 硬件服务器 或虚拟机
                 response.data = models.Server.objects.filter(asset_id=asset_id).select_related('asset').first()
             else:
                 response.data = models.NetworkDevice.objects.filter(asset_id=asset_id).select_related('asset').first()
