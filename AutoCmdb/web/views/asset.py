@@ -39,13 +39,12 @@ class AssetDetailView(View):
 
 class AssetEditlView(View):
     def get(self, request, device_type_id, asset_nid):
-
         obj = asset.Asset.assets_edit_get(device_type_id, asset_nid)
 
         return render(request, 'asset_edit.html', {'obj': obj})
 
     def post(self, request, device_type_id, asset_nid):
-        print(request.POST)
+        ret = asset.Asset.assets_edit_post(request, asset_nid)
         return HttpResponse('ok')
 
 

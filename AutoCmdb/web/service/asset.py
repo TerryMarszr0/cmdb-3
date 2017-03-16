@@ -307,6 +307,7 @@ class Asset(BaseServiceList):
 
     @staticmethod
     def assets_edit_get(device_type_id, asset_nid):
+        """点击资产的编辑按钮,获取资产的信息"""
 
         response = Asset.assets_detail(device_type_id, asset_nid)  # 获取的数据和资产详情是一样的
 
@@ -335,6 +336,37 @@ class Asset(BaseServiceList):
             obj.fields['tag'].initial = ""
 
         return obj
+
+    @staticmethod
+    def assets_edit_post(request, device_type_id, asset_nid):
+        response = BaseResponse()
+        try:
+            if device_type_id in ['1', '2']:  # 硬件服务器 或虚拟机
+                data = {
+                    "hostname": request.POST.get('hostname'),
+                    "asset_device_type_id": request.POST.get('device_type_id'),
+                    "asset_device_status_id": request.POST.get('device_status_id'),
+                    "asset_cabinet_order": request.POST.get('cabinet_order'),
+                    "asset_business_unit_id": request.POST.get('business_unit_id'),
+                    "asset_idc_id": request.POST.get('idc_id'),
+                    "asset_cabinet_num": request.POST.get('cabinet_num'),
+                }
+
+                tag = request.POST.get('tag')
+
+                Server_obj = models.Server.objects.filter(asset_id=asset_nid)
+                Server_obj.update(**data)
+
+                if tag:
+                    print(dir(Server_obj.first().tag))
+
+
+        except Exception as e:
+            response.status = False
+            response.message = str(e)
+        return response
+
+
 
     @staticmethod
     def assets_add(request):
