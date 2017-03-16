@@ -34,7 +34,11 @@
                 <div class="col-sm-2">
                     <select id="id_device_type_id" name="device_type_id" required="">
                         {% for obj in response.data.global_dict.device_type_list %}
-                            <option value="{{ obj.id }}">{{ obj.name }}</option>
+                            {% if response.data.assets_detail.assets.device_type_id == obj.id %}
+                                <option selected value="{{ obj.id }}">{{ obj.name }}</option>
+                            {% else %}
+                                <option value="{{ obj.id }}">{{ obj.name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                 </div>
