@@ -339,6 +339,7 @@ class Asset(BaseServiceList):
 
     @staticmethod
     def assets_edit_post(request, device_type_id, asset_nid):
+        print("request.POST: ", request.POST)
         response = BaseResponse()
         if device_type_id in ['1', '2']:  # 硬件服务器 或虚拟机
             data = {
