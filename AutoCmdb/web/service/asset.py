@@ -343,22 +343,19 @@ class Asset(BaseServiceList):
         response = BaseResponse()
         if device_type_id in ['1', '2']:  # 硬件服务器 或虚拟机
             data = {
-                "hostname": request.POST.get('hostname'),
-                "asset__device_type_id": request.POST.get('device_type_id'),
-                "asset__device_status_id": request.POST.get('device_status_id'),
-                "asset__cabinet_order": request.POST.get('cabinet_order'),
-                "asset__business_unit_id": request.POST.get('business_unit_id'),
-                "asset__idc_id": request.POST.get('idc_id'),
-                "asset__cabinet_num": request.POST.get('cabinet_num'),
+                "device_type_id": request.POST.get('device_type_id'),
+                "device_status_id": request.POST.get('device_status_id'),
+                "cabinet_order": request.POST.get('cabinet_order'),
+                "business_unit_id": request.POST.get('business_unit_id'),
+                "idc_id": request.POST.get('idc_id'),
+                "cabinet_num": request.POST.get('cabinet_num'),
             }
-
+            hostname = request.POST.get('hostname')
             tag = request.POST.get('tag')
 
-            Server_obj = models.Server.objects.filter(asset_id=asset_nid)
-            Server_obj.update(**data)
-            print("tag: --> ", tag)
-            if tag:
-                print(dir(Server_obj.first().tag))
+            models.Server.objects.filter(asset_id=asset_nid).update(hostname=hostname)
+            models.
+
 
 
         # except Exception as e:
