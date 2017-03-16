@@ -362,8 +362,8 @@ class Asset(BaseServiceList):
                 tmp = []
                 old_tag_list = [lambda x: tmp.append(x[0]), Asset_obj.first().tag.all().values_list('id')]
                 print("old_tag_list --> ", old_tag_list)
-                Asset_obj.first().tag.remove()
-                Asset_obj.first().tag.add(*tag_obj)
+                # Asset_obj.first().tag.remove()
+                # Asset_obj.first().tag.add(*tag_obj)
 
 
         # except Exception as e:
