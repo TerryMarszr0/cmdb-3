@@ -42,6 +42,14 @@ class AssetDetailView(View):
         return render(request, 'asset_detail.html', {'response': response, 'device_type_id': device_type_id})
 
 
+class AssetEditlView(View):
+    def get(self, request, device_type_id, asset_nid):
+        response = asset.Asset.assets_detail(device_type_id, asset_nid)     # 获取的数据和资产详情是一样的
+        for k, v in response.data:
+            print(k, v)
+        return render(request, 'asset_edit.html', {'response': response})
+
+
 class AddAssetForm(Form):
     """新增资产Form表单"""
 
@@ -117,19 +125,19 @@ class AddAssetForm(Form):
 
 
 class AddAssetView(View):
+    """添加资产信息"""
     def get(self, request, *args, **kwargs):
         obj = AddAssetForm()
-        return render(request, 'add_asset.html', {'obj': obj})
+        return render(request, 'asset_add.html', {'obj': obj})
 
     def post(self, request, *args, **kwargs):
-        print("-" * 100)
 
         obj = AddAssetForm(request.POST)
 
         if obj.is_valid():
             hostname = obj.cleaned_data.pop('hostname')
             Server_obj = models.Server.objects.filter(hostname=hostname)
-            print(Server_obj)
+
             if Server_obj:  # 判断主机名是否存在
                 # 主机名已经存在
                 obj.errors['hostname'] = ["主机名已存在"]
@@ -152,7 +160,7 @@ class AddAssetView(View):
             # response.error = obj.errors
             # print(response.error)
 
-        return render(request, 'add_asset.html', {'obj': obj})
+        return render(request, 'asset_add.html', {'obj': obj})
 
 
 
