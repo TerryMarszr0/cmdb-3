@@ -26,6 +26,7 @@ def get_untreated_servers():
 
         # 在线状态的服务器
         con_status = Q()
+        con_status.connector = 'AND'
         con_status.children.append(('asset__device_status_id', '2'))        # 资产状态为在线状态   2表示在线状态
 
         condition.add(con_date, 'AND')
