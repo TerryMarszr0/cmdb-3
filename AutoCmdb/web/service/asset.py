@@ -355,12 +355,9 @@ class Asset(BaseServiceList):
             models.Server.objects.filter(asset_id=asset_nid).update(hostname=hostname)
             Asset_obj = models.Asset.objects.filter(id=asset_nid)
             Asset_obj.update(**data)
-            
-            r = dict(request.POST)
-            print(r, r.get('tag'))
-            print(request.POST['tag'])
 
-            tag_list = request.POST.get('tag')
+            tag_list = dict(request.POST).get('tag')
+
             if tag_list:
                 tmp = []
                 for i in Asset_obj.first().tag.all().values_list('id'):
