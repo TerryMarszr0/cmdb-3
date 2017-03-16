@@ -363,7 +363,7 @@ class Asset(BaseServiceList):
                 for i in Asset_obj.first().tag.all().values_list('id'):
                     tmp.append(i[0])
                 print("old_tag_list --> ", tmp)
-                # Asset_obj.first().tag.remove()
+                Asset_obj.first().tag.remove(*tmp)
                 # Asset_obj.first().tag.add(*tag_obj)
 
 
