@@ -104,14 +104,8 @@ class Asset(models.Model):
         (4, '下架'),
     )
 
-    server_type_choices = (
-        (1, '硬件'),
-        (2, '软件'),
-    )
-
     device_type_id = models.IntegerField(verbose_name="资产类型", choices=device_type_choices, default=1)
     device_status_id = models.IntegerField(verbose_name="资产状态", choices=device_status_choices, default=1)
-    server_type_id = models.IntegerField(verbose_name="资产软硬件类型", choices=server_type_choices, default=1)
 
     cabinet_num = models.CharField('机柜号', max_length=30, null=True, blank=True)
     cabinet_order = models.CharField('机柜中序号', max_length=30, null=True, blank=True)
@@ -136,6 +130,12 @@ class Server(models.Model):
     服务器信息
     """
     asset = models.OneToOneField('Asset')
+
+    server_type_choices = (
+        (1, '硬件'),
+        (2, '虚拟机'),
+    )
+    server_type_id = models.IntegerField(verbose_name="服务器类型", choices=server_type_choices, default=1)
 
     hostname = models.CharField(max_length=128, unique=True)
     sn = models.CharField('SN号', max_length=64, db_index=True, null=True, blank=True)

@@ -28,6 +28,7 @@ def get_untreated_servers():
         con_status = Q()
         con_status.connector = 'AND'
         con_status.children.append(('asset__device_status_id', '2'))        # 资产状态为在线状态   2表示在线状态
+        con_status.children.append(('server_type_id', '1'))                 # 服务器类型, 只采集硬件的资产, 1 表示硬件资产 ,阿里云 ESC 调阿里接口获取数据
 
         condition.add(con_date, 'AND')
         condition.add(con_status, 'AND')
