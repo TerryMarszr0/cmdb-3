@@ -136,11 +136,13 @@ class Asset(BaseServiceList):
     # 全局变量
     @property
     def device_status_list(self):
+        """资产状态"""
         result = map(lambda x: {'id': x[0], 'name': x[1]}, models.Asset.device_status_choices)
         return list(result)
 
     @property
     def device_type_list(self):
+        """资产类型"""
         result = map(lambda x: {'id': x[0], 'name': x[1]}, models.Asset.device_type_choices)
         return list(result)
 
@@ -303,6 +305,23 @@ class Asset(BaseServiceList):
         except Exception as e:
             response.status = False
             response.message = str(e)
+        return response
+
+    def assets_edit(self, device_type_id, asset_id):
+        ret = {}
+        response = self.assets_detail(device_type_id, asset_id)
+
+        ret['assets_detail'] = response.data
+        ret['global_dict'] = {
+            'device_status_list': self.device_status_list,
+            'device_type_list': self.device_type_list,
+            'idc_list': self.idc_list,
+            'business_unit_list': self.business_unit_list,
+            'tag_name_list': self.tag_name_list,  # 用作搜索条件处显示标签名称搜索条件
+        }
+
+        response.data = ret
+
         return response
 
 
