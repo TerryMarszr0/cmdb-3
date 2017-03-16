@@ -68,7 +68,7 @@ class AssetEditlView(View):
         else:
             obj.fields['tag'].initial = ""
 
-        tag_list = [lambda x: x, response.data.asset.tag.all().values_list('name')]
+        tag_list = map([lambda x: x, response.data.asset.tag.all().values_list('name')])
         print(tag_list)
         return render(request, 'asset_edit.html', {'obj': obj})
 
