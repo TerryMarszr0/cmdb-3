@@ -35,14 +35,14 @@ class IDC(BaseServiceList):
                 'title': "机房",
                 'display': 1,
                 'text': {'content': "{n}", 'kwargs': {'n': '@name'}},
-                'attr': {}
+                'attr': {'edit-enable': 'true', 'edit-type': 'input','name': 'cabinet_num', 'origin': '@name'}
             },
             {
                 'q': 'floor',
                 'title': "楼层",
                 'display': 1,
                 'text': {'content': "{n}", 'kwargs': {'n': '@floor'}},
-                'attr': {}
+                'attr': {'edit-enable': 'true', 'edit-type': 'input','name': 'cabinet_num', 'origin': '@floor'}
             },
             {
                 'q': None,
