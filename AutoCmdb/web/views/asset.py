@@ -65,7 +65,7 @@ class AssetEditlView(View):
 
         if response.data.asset.tag:
             tag_list = []
-            for tag in response.data.asset.tag.all().values_list('name'):
+            for tag in response.data.asset.tag.all().values_list('id'):
                 tag_list.append(tag[0])
             print(tag_list)
             obj.fields['tag'].initial = tag_list
