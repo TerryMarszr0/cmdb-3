@@ -76,7 +76,7 @@ class AssetEditlView(View):
 
         return render(request, 'asset_edit.html', {'obj': obj})
 
-    def post(self, request):
+    def post(self, request, device_type_id, asset_nid):
         print(dir(request))
 
         return HttpResponse('ok')
