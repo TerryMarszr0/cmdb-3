@@ -41,7 +41,7 @@ class Asset(BaseServiceList):
             {
                 'q': 'server_title',
                 'title': "主机名",
-                'display': 0,
+                'display': 1,
                 'text': {'content': "{n}", 'kwargs': {'n': '@server_title'}},
                 'attr': {}
             },
