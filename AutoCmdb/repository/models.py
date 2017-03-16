@@ -66,7 +66,7 @@ class IDC(models.Model):
     机房信息
     """
     name = models.CharField('机房', max_length=32)
-    floor = models.IntegerField('楼层', null=True, blank=True, default=None)
+    floor = models.IntegerField('楼层', null=True, blank=True, default="")
 
     class Meta:
         verbose_name_plural = "机房表"

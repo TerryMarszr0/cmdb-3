@@ -86,7 +86,6 @@ class IDC(BaseServiceList):
         try:
             ret = {}
             conditions = self.idc_condition(request)     # 根据搜索条件构造 q 对象
-            print(conditions)
             asset_count = models.IDC.objects.filter(conditions).count()   # 根据搜索条件统计搜索总数量
             page_info = PageInfo(request.GET.get('pager', None), asset_count)   # 使用 PageInfo 构造 分页
             asset_list = models.IDC.objects.filter(conditions).extra(select=self.extra_select).values(*self.values_list)[page_info.start:page_info.end]

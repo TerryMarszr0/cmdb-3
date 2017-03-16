@@ -33,8 +33,8 @@ class AssetDetailView(View):
         return render(request, 'asset_detail.html', {'response': response, 'device_type_id': device_type_id})
 
 
-class AddAssetView(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'add_asset.html')
+# class AddAssetView(View):
+#     def get(self, request, *args, **kwargs):
+#         return render(request, 'asset.html')
 
 
