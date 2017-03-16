@@ -1,0 +1,145 @@
+{% extends 'layout/_layout.html' %}
+
+{% block css %}
+    <style>
+        select {
+            height: 30px;
+        }
+        .error-p{
+            padding-top: 5px;
+            color: red;
+            text-align: left;
+            padding-left: 5px;
+            float: left;
+
+        }
+        #id_tag li{
+            list-style: none;
+        }
+    </style>
+
+{% endblock %}
+
+{% block conent %}
+    <ol class="breadcrumb" style="margin-bottom: 0;">
+        <li><a href="/cmdb.html">首页</a></li>
+        <li><a href="/asset.html">资产列表</a></li>
+        <li class="active">添加资产</li>
+    </ol>
+    <div style="padding: 10px 0 10px 10px;">
+        <form class="form-horizontal" method="post" action="#" novalidate="novalidate">
+            <input type="hidden" name="csrfmiddlewaretoken" value="jDvrir2Jl1PjRJAtlldNpsZymir9oQGR7S9VeJMjdtAfCdTPs16I7wGUnFFuyZij">
+            <div class="form-group">
+                <label for="id_device_type_id" class="col-sm-2 control-label">资产类型: </label>
+                <div class="col-sm-2">
+                    <select id="id_device_type_id" name="device_type_id" required="">
+                        <option value="1">服务器-硬件</option>
+                        <option value="2">服务器-虚拟机</option>
+                        <option value="3">交换机</option>
+                        <option value="4">防火墙</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_device_status_id" class="col-sm-2 control-label">资产状态: </label>
+                <div class="col-sm-2">
+                    <select id="id_device_status_id" name="device_status_id" required="">
+                        <option value="1">上架</option>
+                        <option value="2">在线</option>
+                        <option value="3">离线</option>
+                        <option value="4">下架</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="id_hostname" class="col-sm-2 control-label">主机名: </label>
+                <div class="col-sm-3">
+                    <input class="form-control" id="id_hostname" name="hostname" type="None" required="">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="id_cabinet_num" class="col-sm-2 control-label">机柜号: </label>
+                <div class="col-sm-3">
+                    <input class="form-control" id="id_cabinet_num" name="cabinet_num" placeholder="请输入机柜号,没有可为空" type="None">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="id_cabinet_order" class="col-sm-2 control-label">机柜中序号: </label>
+                <div class="col-sm-3">
+                    <input class="form-control" id="id_cabinet_order" name="cabinet_order" placeholder="请输入机柜中所在位置,没有可为空" type="None">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="id_idc" class="col-sm-2 control-label">IDC机房: </label>
+                <div class="col-sm-2">
+                    <select id="id_idc_id" name="idc_id">
+                        <option value="" selected="selected">---------</option>
+                        <option value="1">兆维-4</option>
+                        <option value="3">阿里云-青岛-None</option>
+                        <option value="5">阿里云-北京-None</option>
+                        <option value="7">阿里云-美国-None</option>
+                        <option value="9">阿里云-香港-None</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="id_business_unit" class="col-sm-2 control-label">业务线: </label>
+                <div class="col-sm-2">
+                    <select id="id_business_unit_id" name="business_unit_id">
+                        <option value="" selected="selected">---------</option>
+                        <option value="5">医管家</option>
+                        <option value="3">数据分析</option>
+                        <option value="1">新闻稿</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="id_tag" class="col-sm-2 control-label">标签: </label>
+                <div class="col-sm-2" style="margin-top: 5px;">
+                    <ul id="id_tag">
+                        <li><label for="id_tag_0"><input id="id_tag_0" name="tag" type="checkbox" value="3"> db</label></li>
+                        <li><label for="id_tag_1"><input id="id_tag_1" name="tag" type="checkbox" value="1"> web</label></li>
+                        <li><label for="id_tag_2"><input id="id_tag_2" name="tag" type="checkbox" value="11"> 云覆盖</label></li>
+                        <li><label for="id_tag_3"><input id="id_tag_3" name="tag" type="checkbox" value="13"> 媒体</label></li>
+                        <li><label for="id_tag_4"><input id="id_tag_4" name="tag" type="checkbox" value="7"> 新闻稿</label></li>
+                        <li><label for="id_tag_5"><input id="id_tag_5" name="tag" type="checkbox" value="5"> 站群</label></li>
+                        <li><label for="id_tag_6"><input id="id_tag_6" name="tag" type="checkbox" value="9"> 顺势</label></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="form-group" style="margin-left: 130px;">
+                <button type="submit" class="btn btn-success">修改</button>
+                <button type="button" class="btn btn-info" onclick="window.history.back(-1)">返回</button>
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/static/plugins/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/js/nb-list.js"></script>
+
+    <script>
+        $(function () {
+            $.initMenu('#menu_asset');
+        });
+
+
+    </script>
+{% endblock %}
