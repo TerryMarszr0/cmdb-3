@@ -360,7 +360,7 @@ class Asset(BaseServiceList):
             if tag_list:
                 tag_obj = models.Tag.objects.filter(id__in=tag_list)
                 Asset_obj.first().tag.delete()
-                Asset_obj.tag.add(*tag_obj)
+                Asset_obj.first().tag.add(*tag_obj)
 
 
         # except Exception as e:
