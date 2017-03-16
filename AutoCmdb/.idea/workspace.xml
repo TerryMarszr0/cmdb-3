@@ -46,8 +46,8 @@
       <file leaf-file-name="idc.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/views/idc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="315">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -56,9 +56,34 @@
       <file leaf-file-name="idc.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/service/idc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+            <state relative-caret-position="721">
+              <caret line="132" column="40" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="asset.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/service/asset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="267" column="28" selection-start-line="267" selection-start-column="28" selection-end-line="267" selection-end-column="28" />
+              <folding>
+                <element signature="e#45#56#0" expanded="true" />
+                <element signature="e#362#5890#0" expanded="false" />
+                <element signature="e#5959#6092#0" expanded="false" />
+                <element signature="e#6148#6279#0" expanded="false" />
+                <element signature="e#6327#6843#0" expanded="false" />
+                <element signature="e#6893#7466#0" expanded="false" />
+                <element signature="e#7519#7602#0" expanded="false" />
+                <element signature="e#7660#7745#0" expanded="false" />
+                <element signature="e#7808#8235#0" expanded="false" />
+                <element signature="e#8282#9741#0" expanded="false" />
+                <element signature="e#9801#10192#0" expanded="false" />
+                <element signature="e#11830#13036#0" expanded="false" />
+                <marker date="1489651636000" expanded="true" signature="5486:5615" ph="select hostn... repository_server" />
+                <marker date="1489651636000" expanded="true" signature="5648:5796" ph="select manag... repository_networkdevice" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1014,30 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/service/asset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="359" column="0" selection-start-line="359" selection-start-column="0" selection-end-line="359" selection-end-column="0" />
-          <folding>
-            <element signature="e#45#56#0" expanded="true" />
-            <element signature="e#362#5890#0" expanded="false" />
-            <element signature="e#5959#6092#0" expanded="false" />
-            <element signature="e#6148#6279#0" expanded="false" />
-            <element signature="e#6327#6843#0" expanded="false" />
-            <element signature="e#6893#7466#0" expanded="false" />
-            <element signature="e#7519#7602#0" expanded="false" />
-            <element signature="e#7660#7745#0" expanded="false" />
-            <element signature="e#7808#8235#0" expanded="false" />
-            <element signature="e#8282#9741#0" expanded="false" />
-            <element signature="e#9801#10192#0" expanded="false" />
-            <element signature="e#10249#11194#0" expanded="false" />
-            <element signature="e#11830#13036#0" expanded="false" />
-            <marker date="1489651636000" expanded="true" signature="5486:5615" ph="select hostn... repository_server" />
-            <marker date="1489651636000" expanded="true" signature="5648:5796" ph="select manag... repository_networkdevice" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/asset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -1096,16 +1097,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/idc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="315">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/service/asset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="267" column="28" selection-start-line="267" selection-start-column="28" selection-end-line="267" selection-end-column="28" />
+          <folding>
+            <element signature="e#45#56#0" expanded="true" />
+            <element signature="e#362#5890#0" expanded="false" />
+            <element signature="e#5959#6092#0" expanded="false" />
+            <element signature="e#6148#6279#0" expanded="false" />
+            <element signature="e#6327#6843#0" expanded="false" />
+            <element signature="e#6893#7466#0" expanded="false" />
+            <element signature="e#7519#7602#0" expanded="false" />
+            <element signature="e#7660#7745#0" expanded="false" />
+            <element signature="e#7808#8235#0" expanded="false" />
+            <element signature="e#8282#9741#0" expanded="false" />
+            <element signature="e#9801#10192#0" expanded="false" />
+            <element signature="e#11830#13036#0" expanded="false" />
+            <marker date="1489651636000" expanded="true" signature="5486:5615" ph="select hostn... repository_server" />
+            <marker date="1489651636000" expanded="true" signature="5648:5796" ph="select manag... repository_networkdevice" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/service/idc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="119" column="30" selection-start-line="119" selection-start-column="30" selection-end-line="119" selection-end-column="30" />
+        <state relative-caret-position="721">
+          <caret line="132" column="40" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
           <folding />
         </state>
       </provider>

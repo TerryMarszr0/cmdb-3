@@ -134,7 +134,7 @@ class IDC(BaseServiceList):
                 nid = row_dict.pop('nid')
                 num = row_dict.pop('num')
                 try:
-                    models.Asset.objects.filter(id=nid).update(**row_dict)
+                    models.IDC.objects.filter(id=nid).update(**row_dict)
                 except Exception as e:
                     response.error.append({'num': num, 'message': str(e)})
                     response.status = False
