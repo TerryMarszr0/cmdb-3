@@ -45,8 +45,7 @@ class AssetDetailView(View):
 class AssetEditlView(View):
     def get(self, request, device_type_id, asset_nid):
         response = asset.Asset.assets_detail(device_type_id, asset_nid)     # 获取的数据和资产详情是一样的
-        for k, v in response.data:
-            print(k, v)
+        print(response.data)
         return render(request, 'asset_edit.html', {'response': response})
 
 

@@ -46,11 +46,11 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/views/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+            <state relative-caret-position="315">
+              <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
               <folding>
                 <element signature="e#586#989#0" expanded="false" />
-                <element signature="e#1601#3650#0" expanded="false" />
+                <element signature="e#1571#3620#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1160,11 +1160,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+        <state relative-caret-position="315">
+          <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
           <folding>
             <element signature="e#586#989#0" expanded="false" />
-            <element signature="e#1601#3650#0" expanded="false" />
+            <element signature="e#1571#3620#0" expanded="false" />
           </folding>
         </state>
       </provider>
