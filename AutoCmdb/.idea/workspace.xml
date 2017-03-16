@@ -58,8 +58,8 @@
       <file leaf-file-name="asset.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/service/asset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="362" column="73" selection-start-line="362" selection-start-column="73" selection-end-line="362" selection-end-column="73" />
+            <state relative-caret-position="375">
+              <caret line="365" column="39" selection-start-line="365" selection-start-column="39" selection-end-line="365" selection-end-column="39" />
               <folding>
                 <element signature="e#45#56#0" expanded="true" />
                 <element signature="e#362#5890#0" expanded="false" />
@@ -74,8 +74,9 @@
                 <element signature="e#9801#10192#0" expanded="false" />
                 <element signature="e#10249#11194#0" expanded="false" />
                 <element signature="e#11830#13036#0" expanded="false" />
-                <marker date="1489650931000" expanded="true" signature="5486:5615" ph="select hostn... repository_server" />
-                <marker date="1489650931000" expanded="true" signature="5648:5796" ph="select manag... repository_networkdevice" />
+                <marker date="1489650985000" expanded="true" signature="5486:5615" ph="select hostn... repository_server" />
+                <marker date="1489650985000" expanded="true" signature="5648:5796" ph="select manag... repository_networkdevice" />
+                <marker date="1489650985000" expanded="true" signature="14227:14361" ph="..." />
               </folding>
             </state>
           </provider>
@@ -1111,8 +1112,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/service/asset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="362" column="73" selection-start-line="362" selection-start-column="73" selection-end-line="362" selection-end-column="73" />
+        <state relative-caret-position="375">
+          <caret line="365" column="39" selection-start-line="365" selection-start-column="39" selection-end-line="365" selection-end-column="39" />
           <folding>
             <element signature="e#45#56#0" expanded="true" />
             <element signature="e#362#5890#0" expanded="false" />
@@ -1127,8 +1128,9 @@
             <element signature="e#9801#10192#0" expanded="false" />
             <element signature="e#10249#11194#0" expanded="false" />
             <element signature="e#11830#13036#0" expanded="false" />
-            <marker date="1489650931000" expanded="true" signature="5486:5615" ph="select hostn... repository_server" />
-            <marker date="1489650931000" expanded="true" signature="5648:5796" ph="select manag... repository_networkdevice" />
+            <marker date="1489650985000" expanded="true" signature="5486:5615" ph="select hostn... repository_server" />
+            <marker date="1489650985000" expanded="true" signature="5648:5796" ph="select manag... repository_networkdevice" />
+            <marker date="1489650985000" expanded="true" signature="14227:14361" ph="..." />
           </folding>
         </state>
       </provider>
