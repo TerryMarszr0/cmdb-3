@@ -115,7 +115,7 @@ class IDC(BaseServiceList):
         try:
             delete_dict = QueryDict(request.body, encoding='utf-8')
             id_list = delete_dict.getlist('id_list')
-            models.Asset.objects.filter(id__in=id_list).delete()
+            models.IDC.objects.filter(id__in=id_list).delete()
             response.message = '删除成功'
         except Exception as e:
             response.status = False
