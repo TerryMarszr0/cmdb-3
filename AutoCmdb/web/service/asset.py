@@ -353,6 +353,8 @@ class Asset(BaseServiceList):
             hostname = request.POST.get('hostname')
             tag = request.POST.get('tag')
 
+            print("idr --> ", dir(models.Asset.objects.filter(id=asset_nid).first().tag))
+
             models.Server.objects.filter(asset_id=asset_nid).update(hostname=hostname)
             models.Asset.objects.filter(id=asset_nid).update(**data)
 
