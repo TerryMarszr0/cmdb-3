@@ -75,18 +75,18 @@ WSGI_APPLICATION = 'AutoCmdb.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # },
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cmdb',
-        'USER': 'zhangcong',
-        'PASSWORD': 'D4d^b9ec%26AaFE55b3@',
-        'HOST': '192.168.10.20',
-        'PORT': '3306',
-    }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'cmdb',
+    #     'USER': 'zhangcong',
+    #     'PASSWORD': 'D4d^b9ec%26AaFE55b3@',
+    #     'HOST': '192.168.10.20',
+    #     'PORT': '3306',
+    # }
 }
 
 
