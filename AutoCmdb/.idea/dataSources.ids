@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="Django default" uuid="e4fbebd9-22dc-4f28-8855-f86c8ad7fbbe">
+  <data-source name="Django default2" uuid="6c70fa3a-9409-4431-b2c7-35a288035aae">
     <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
     <schema name="" catalog=""/>
@@ -117,7 +117,7 @@
       <column name="cabinet_num" sqlType="VARCHAR(30)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="cabinet_order" sqlType="VARCHAR(30)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="latest_date" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="create_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="create_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="business_unit_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="idc_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <primary-key columns="id"/>
@@ -163,9 +163,9 @@
     <table name="repository_disk" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <column name="slot" sqlType="VARCHAR(8)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="model" sqlType="VARCHAR(32)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="model" sqlType="VARCHAR(128)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <column name="capacity" sqlType="REAL" precision="0" scale="-1" nullable="false" jdbcType="6"/>
-      <column name="pd_type" sqlType="VARCHAR(32)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="pd_type" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <column name="server_obj_id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <primary-key columns="id"/>
       <foreign-key name="#FAKE_repository_disk_1" columns="server_obj_id" ref-table="repository_server" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
@@ -174,9 +174,9 @@
     <table name="repository_errorlog" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <column name="title" sqlType="VARCHAR(16)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="content" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <column name="create_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <column name="asset_obj_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="content" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
       <foreign-key name="#FAKE_repository_errorlog_1" columns="asset_obj_id" ref-table="repository_asset" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <index name="repository_errorlog_ac7d9b9f" unique="true" columns="asset_obj_id"/>
@@ -184,7 +184,7 @@
     <table name="repository_idc" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR(32)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="floor" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="floor" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <primary-key columns="id"/>
     </table>
     <table name="repository_memory" schema="" catalog="" type="TABLE">
@@ -219,9 +219,9 @@
       <column name="name" sqlType="VARCHAR(128)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <column name="hwaddr" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <column name="netmask" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="server_obj_id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="up" sqlType="BOOL" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <column name="ipaddrs" sqlType="VARCHAR(256)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="up" sqlType="BOOL" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="server_obj_id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <primary-key columns="id"/>
       <foreign-key name="#FAKE_repository_nic_1" columns="server_obj_id" ref-table="repository_server" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <index name="repository_nic_ea5224fe" unique="true" columns="server_obj_id"/>
@@ -229,12 +229,12 @@
     <table name="repository_server" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <column name="hostname" sqlType="VARCHAR(128)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="sn" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="sn" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="manufacturer" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="model" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="manage_ip" sqlType="CHAR(39)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="os_platform" sqlType="VARCHAR(16)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="os_version" sqlType="VARCHAR(16)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="os_platform" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="os_version" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="cpu_count" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="cpu_physical_count" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="cpu_model" sqlType="VARCHAR(128)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
@@ -269,7 +269,7 @@
       <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR(32)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR(254)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="phone" sqlType="VARCHAR(32)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR(32)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="mobile" sqlType="VARCHAR(32)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>

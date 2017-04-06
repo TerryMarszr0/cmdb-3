@@ -41,7 +41,7 @@ class Asset(BaseServiceList):
             {
                 'q': 'server_title',
                 'title': "主机名",
-                'display': 0,
+                'display': 1,
                 'text': {'content': "{n}", 'kwargs': {'n': 'xx'}},
                 'attr': {}
             },
@@ -394,7 +394,7 @@ class Asset(BaseServiceList):
 
                 Asset_obj = models.Asset.objects.create(**obj.cleaned_data)
 
-                models.Server.objects.create(hostname=hostname, asset_id=obj.id)
+                models.Server.objects.create(hostname=hostname, asset_id=Asset_obj.id)
 
                 if tag_list:
                     tag_obj = models.Tag.objects.filter(id__in=tag_list)

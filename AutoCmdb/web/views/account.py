@@ -57,6 +57,7 @@ class loginForm(Form):
 
     )
 
+
 class LoginView(View):
 
     def dispatch(self, request, *args, **kwargs):
